@@ -7,8 +7,8 @@ Site web statique: commande de nourriture
 
 Date de remise: Jeudi, le 23 mai 2019
 
-# Exigences
-- Créer les pages statiques suivantes (en utilisant seulement HTML et CSS)
+## Exigences
+Créer les pages statiques suivantes (en utilisant seulement HTML et CSS)
 - [ ] Page d’accueil
 - [ ] Liste de restaurants
 - [ ] Page de menu
