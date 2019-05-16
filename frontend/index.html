@@ -19,38 +19,30 @@
   </head>
   <body>
     <div class="layout">
-      <div class="layout__navbar navbar">
-        <div class="navbar__actions actions">
-          <div class="action">
-            <i class="action__icon far fa-building"></i>
-            <div class="action__text">Home</div>
-          </div>
-          <div class="action">
-            <i class="action__icon far fa-lightbulb"></i>
-            <div class="action__text">Moments</div>
-          </div>
-          <div class="action">
-            <i class="action__icon far fa-bell"></i>
-            <div class="action__text">Notifications</div>
-          </div>
-          <div class="action">
-            <i class="action__icon far fa-envelope"></i>
-            <div class="action__text">Messages</div>
+      <div class="layout__header header">
+        <div class="header__pitch pitch">
+          <div class="pitch__container">
+            <h1 class="pitch__maintext">Order food <br />the easy way</h1>
+            <p class="pitch__subtext">Choose your favourite meals now.</p>
+            <button class="pitch__button">Explore All</button>
           </div>
         </div>
-        <!-- <img class="navbar__logo" src="https://via.placeholder.com/32x32"> -->
-        <div class="navbar__logo ">
-          <i class="fab fa-twitter"></i>
+        <div class="header__image-container image-container">
+          <img src="https://source.unsplash.com/random/500x500" />
         </div>
-        <div class="navbar__search search">
-          <input placeholder="Search Twitter" type="text" />
-          <i class="fas fa-search"></i>
+        <div class="header__search search">
+            <form>
+                <div class="styled-input">
+                  <input type="text" placeholder="Search" required />
+                </div>
+                <div class="styled-input">
+                  <input type="text" placeholder="City" required />
+                </div>
+                <div class="styled-input">
+                  <input type="tel" placeholder="Category" required />
+                </div>
+              </form>
         </div>
-        <img class="navbar__profile" src="images/anthony.jpg" />
-        <button class="navbar__tweet">Tweet</button>
-      </div>
-      <div class="layout__image-container image-container">
-        <img src="https://source.unsplash.com/user/alexacea" />
       </div>
     </div>
   </body>
