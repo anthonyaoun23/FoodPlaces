@@ -28,22 +28,44 @@
           </div>
         </div>
         <div class="header__image-container image-container">
-          <img src="https://source.unsplash.com/random/500x500" />
-        </div>
-        <div class="header__search search">
-            <form>
-                <div class="styled-input">
-                  <input type="text" placeholder="Search" required />
-                </div>
-                <div class="styled-input">
-                  <input type="text" placeholder="City" required />
-                </div>
-                <div class="styled-input">
-                  <input type="tel" placeholder="Category" required />
-                </div>
-              </form>
+          <img src="./thomas-tucker-391058-unsplash.jpg" />
         </div>
       </div>
+      <div class="search-container">
+        <form class="header__search search">
+            <div class="search__search styled-input">
+              <input class="border-left" placeholder="Search" type="text" />
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="search__category styled-input">
+              <!-- <input type="tel" placeholder="Italian & Pizza" required /> -->
+              <select class="category-select">
+                <option class="disabled" disabled selected value="books">Select Food Category</option>
+                <option value="books">Italian & Pizza</option>
+                <option value="html">Japanese & Sushi</option>
+                <option value="css">Coffee & Tea</option>
+                <option value="php">Noodle Soups</option>
+                <option value="js">Rice</option>
+              </select>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="search__city styled-input">
+              <select class="city-select">
+                <option class="disabled" disabled selected value="books">Select City</option>
+                <option value="books">Ottawa</option>
+                <option value="html">Montreal</option>
+                <option value="css">Toronto</option>
+                <option value="php">Waterloo</option>
+                <option value="js">Kingston</option>
+                <option value="js">Hamilton</option>
+              </select>
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <div class="search__button styled-input">
+              <button class="border-right search-button" type="button">Search</button>
+            </div>
+          </form>
+    </div>
     </div>
   </body>
 </html>
