@@ -13,7 +13,7 @@ Créer les pages statiques suivantes (en utilisant seulement HTML et CSS)
 - [ ] Liste de restaurants
 - [ ] Page de menu
 - [x] Page de commande (panier)
-- [ ] Page de confirmation de paiement
+- [x] Page de confirmation de paiement
 
 ## Page d’accueil
 - [ ] Cette page contiendra le logo du restaurant (votre propre création ou le logo de l’université)
