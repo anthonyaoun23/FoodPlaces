@@ -168,7 +168,7 @@ body {
 
 .cart {
   grid-column: cart-s/cart-e;
-  margin: 0 170px; }
+  margin: 0 150px; }
   .cart__header {
     margin-bottom: 100px; }
     .cart__header h1 {
@@ -209,7 +209,7 @@ body {
   font-weight: 600; }
 
 .info__price {
-  width: 60px;
+  width: 76px;
   height: 32px;
   border: 1px solid transparent;
   border-radius: 100px;

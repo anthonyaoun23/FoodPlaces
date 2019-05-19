@@ -229,7 +229,7 @@ body {
 
 .cart {
   grid-column: cart-s/cart-e;
-  margin: 0 170px;
+  margin: 0 150px;
   &__header {
     margin-bottom: 100px;
     h1 {
@@ -282,7 +282,7 @@ body {
     font-weight: 600;
   }
   &__price {
-    width: 60px;
+    width: 76px;
     height: 32px;
     border: 1px solid transparent;
     border-radius: 100px;
