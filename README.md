@@ -17,10 +17,9 @@ Créer les pages statiques suivantes (en utilisant seulement HTML et CSS)
 
 ## Page d’accueil
 - [ ] Cette page contiendra le logo du restaurant (votre propre création ou le logo de l’université)
-- [ ] Une liste de sélection de villes
-- [ ] Une barre de recherche
-- [ ] Un panneau pour sélectionner le type de repas (Petit déjeuner, lunch, dîner, à emporter,
-boissons,...)
+- [x] Une liste de sélection de villes
+- [x] Une barre de recherche
+- [x] Un panneau pour sélectionner le type de repas (Petit déjeuner, lunch, dîner, à emporter, boissons,...)
 
 ## Page avec liste de restaurants
 Cette page aura la liste de restaurants avec de brefs détails comme: 
