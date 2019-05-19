@@ -160,3 +160,27 @@ body {
   text-decoration: none;
   overflow: hidden;
   cursor: pointer; }
+
+.layout_commande {
+  display: grid;
+  grid-template-columns: 30vw [cart-s] 1fr [cart-e] 30vw;
+  padding-top: 200px; }
+
+.cart {
+  grid-column: cart-s/cart-e; }
+  .cart__header {
+    margin-bottom: 200px; }
+    .cart__header h1 {
+      font-size: 64px;
+      font-weight: 400; }
+
+.item__img {
+  object-fit: cover;
+  height: 125px;
+  width: 115px; }
+
+.img-container__img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px; }
