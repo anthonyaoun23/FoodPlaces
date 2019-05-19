@@ -382,3 +382,37 @@ body {
   border: 2px solid black;
   border-radius: 50px;
 }
+
+.layout_paiment {
+  padding-top: 200px;
+  display: grid;
+  grid-column: 1fr [paiment-s] 1fr [paiment-e] 1fr;
+
+}
+
+.paiment {
+  grid-column: paiment-s/paiment-e;
+  &__header {
+    margin-bottom: 100px;
+    margin-left: 100px;
+    h1 {
+      font-size: 64px;
+      font-weight: 600;
+    }
+  }
+
+  &__checkout {
+    // position: relative;
+    background: #F8F8F8;
+    height: 25vh;
+    width: 40vw;
+    align-items: center;
+    // justify-items: center;
+    border-radius: 6px;
+    // margin-top: 24px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  
+    font-size: 24px;
+  }
+}
