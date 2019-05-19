@@ -44,8 +44,8 @@ Cette page aura une liste d’articles ajoutés dans le panier et avec comme de
 
 ## Page de confirmation de paiement
 Cette page aura les détails finaux de la livraison tels que: 
-- [ ] Prix total de la nourriture
-- [ ] Détails sur le paiement (carte débit, crédit ou cash à la livraison) 
-- [ ] Adresse de livraison
-- [ ] Bouton de confirmation (qui confirme la commande)
+- [x] Prix total de la nourriture
+- [x] Détails sur le paiement (carte débit, crédit ou cash à la livraison) 
+- [x] Adresse de livraison
+- [x] Bouton de confirmation (qui confirme la commande)
 
