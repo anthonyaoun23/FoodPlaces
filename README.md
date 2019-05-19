@@ -12,7 +12,7 @@ Créer les pages statiques suivantes (en utilisant seulement HTML et CSS)
 - [ ] Page d’accueil
 - [ ] Liste de restaurants
 - [ ] Page de menu
-- [ ] Page de commande (panier)
+- [x] Page de commande (panier)
 - [ ] Page de confirmation de paiement
 
 ## Page d’accueil
@@ -38,9 +38,9 @@ Cette page disposera de la liste de plats servis par le restaurant avec les dé
 
 ## Page de commande
 Cette page aura une liste d’articles ajoutés dans le panier et avec comme détails par exemple: 
-- [ ] Quantité de nourriture
-- [ ] Prix de la nourriture
-- [ ] Bouton pour confirmer et aller au paiement
+- [x] Quantité de nourriture
+- [x] Prix de la nourriture
+- [x] Bouton pour confirmer et aller au paiement
 
 ## Page de confirmation de paiement
 Cette page aura les détails finaux de la livraison tels que: 
