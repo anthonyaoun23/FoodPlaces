@@ -7,6 +7,11 @@ Site web statique: commande de nourriture
 
 Date de remise: Jeudi, le 23 mai 2019
 
+## TODO
+- [ ] Clean folder structure
+- [ ] Add navbar to all pages
+- [ ] Add favicon to all pages
+
 ## Exigences
 Créer les pages statiques suivantes (en utilisant seulement HTML et CSS)
 - [ ] Page d’accueil
