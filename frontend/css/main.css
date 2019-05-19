@@ -305,6 +305,47 @@ body {
     .paiment__header h1 {
       font-size: 64px;
       font-weight: 600; }
+  .paiment__address {
+    grid-column: address-s/address-e;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    height: auto;
+    width: 40vw;
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 100px; }
+    .paiment__address h1 {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 20px; }
+    .paiment__address p {
+      margin-bottom: 60px;
+      padding-right: 100px; }
+  .paiment__method {
+    grid-column: address-s/address-e;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    height: auto;
+    width: 40vw;
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 100px; }
+    .paiment__method h1 {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 20px; }
+    .paiment__method p {
+      padding-right: 100px;
+      margin-bottom: 16px; }
+    .paiment__method i {
+      font-size: 42px;
+      margin-bottom: 60px;
+      margin-right: 16px; }
+  .paiment .payment-info {
+    display: flex;
+    flex-direction: row; }
   .paiment__checkout {
     background: #F8F8F8;
     height: auto;
@@ -325,7 +366,8 @@ body {
   margin-top: 60px; }
 
 .coupon {
-  height: 40px; }
+  height: 40px;
+  margin-bottom: 90px; }
   .coupon__form {
     width: 100%;
     height: 100%;
@@ -344,11 +386,89 @@ body {
       font-size: 16px;
       color: white;
       background: black;
-      border-radius: 4px; }
+      border-radius: 4px;
+      cursor: pointer; }
 
-.pay button {
-  height: 48px;
-  width: 100px;
-  border-radius: 10px;
-  background: black;
-  color: white; }
+.pay {
+  padding-bottom: 100px; }
+  .pay button {
+    height: 54px;
+    width: 250px;
+    border-radius: 40px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600; }
+
+.address-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+  .address-info label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px; }
+  .address-info input {
+    height: 32px;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    width: 40%;
+    padding-left: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px; }
+
+.cardnumber-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+  .cardnumber-info label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px; }
+  .cardnumber-info input {
+    height: 32px;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    width: 40%;
+    padding-left: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px; }
+
+.payment-details {
+  display: flex;
+  flex-direction: column; }
+  .payment-details label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px; }
+  .payment-details input {
+    height: 32px;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    width: 40%;
+    padding-left: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px; }
+
+.cardnumber {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+  .cardnumber input {
+    width: 60%; }
+  .cardnumber__details {
+    display: grid;
+    width: 70%;
+    grid-template-columns: [names-s] 2fr [names-e exp-s] 1fr [exp-e cvv-s] 1fr [cvv-e]; }
+    .cardnumber__details__name {
+      grid-column: names-s/names-e; }
+      .cardnumber__details__name input {
+        width: 80%; }
+    .cardnumber__details__exp {
+      grid-column: exp-s/exp-e; }
+    .cardnumber__details__cvv {
+      grid-column: cvv-s/cvv-e; }

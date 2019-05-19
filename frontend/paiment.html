@@ -109,6 +109,76 @@
           <h1>Checkout</h1>
         </div>
 
+        <div class="paiment__address">
+          <h1>Address Information</h1>
+          <p>Is the address you'd like to use displayed below? If so, click the corresponding "Ship to this address" button. Or you can enter a new shipping address</p>
+
+          <form action="">
+           <div class="address-info">
+              <label for="fullname">Full Name</label>
+              <input id="fullname" type="text">
+           </div>
+           <div class="address-info">
+              <label for="address">Address Line</label>
+              <input id="address" type="text">
+           </div>
+           <div class="address-info">
+              <label for="icity">City</label>
+              <input id="icity" type="text">
+           </div>
+           <div class="address-info">
+              <label for="province">Province</label>
+              <input id="province" type="text">
+           </div>
+           <div class="address-info">
+              <label for="postal">Postal Code</label>
+              <input id="postal" type="text">
+           </div>
+           <div class="address-info">
+              <label for="phone">Phone Number</label>
+              <input id="phone" type="phone">
+           </div>
+          </form>
+
+        </div>
+
+        <div class="paiment__method">
+            <h1>Payment Method</h1>
+            <div class="payment-info">
+            <p>FoodPlaces accepts all major credit and debit cards:</p>
+
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-discover"></i>
+                <i class="fab fa-cc-amex"></i>
+            </div>
+
+  
+            <form action="">
+             <div class="payment-details">
+                <div class="cardnumber">
+                    <label for="fullname">Card Number</label>
+                    <input id="fullname" type="text">
+                 </div>
+                 <div class="cardnumber__details">
+                    <div class="cardnumber-info cardnumber__details__name">
+                        <label for="nameoncard">Name on Card</label>
+                        <input id="nameoncard" type="text">
+                     </div>
+                     <div class="cardnumber-info cardnumber__details__exp">
+                        <label for="icity">Expiry Date</label>
+                        <input id="icity" type="text">
+                     </div>
+                     <div class="cardnumber-info cardnumber__details__cvv">
+                        <label for="province">CVV Code</label>
+                        <input id="province" type="text">
+                     </div>
+                 </div>
+             </div>
+            </form>
+  
+          </div>
+
         <div class="paiment__checkout">
           <p class="checkout__summary">Order Summary</p>
           <!-- <p class="checkout__">Total: $98.46</p> -->
@@ -176,7 +246,7 @@
           </form>
         </div>
         <div class="pay">
-          <button>PAY $98.36</button>
+          <button>PAY $60.00</button>
         </div>
       </div>
     </div>

@@ -403,6 +403,62 @@ body {
     }
   }
 
+  &__address {
+    grid-column: address-s/address-e;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    height: auto;
+    width: 40vw;
+    padding-left: 100px; 
+    padding-top: 100px; 
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    h1 {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 60px;
+      padding-right: 100px;
+    }
+    
+  }
+
+  &__method {
+    grid-column: address-s/address-e;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    height: auto;
+    width: 40vw;
+    padding-left: 100px; 
+    padding-top: 100px; 
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    h1 {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    p {
+      padding-right: 100px;
+      margin-bottom: 16px;
+    }
+
+    i {
+      font-size: 42px;
+      margin-bottom: 60px;
+      margin-right: 16px;
+    }
+  }
+
+  .payment-info {
+    display: flex;
+    flex-direction: row;
+    // align-content: center;
+    // justify-content: center;
+  }
+
   &__checkout {
     // position: relative;
     background: #F8F8F8;
@@ -436,6 +492,7 @@ body {
 .coupon {
   // width: 128px;
   height: 40px;
+  margin-bottom: 90px;
 
 
   &__form {
@@ -458,6 +515,7 @@ body {
       color: white;
       background: black;
       border-radius: 4px;
+      cursor: pointer;
 
     }
   }
@@ -465,13 +523,117 @@ body {
 }
 
 .pay {
-
-
   button {
-    height: 48px;
-    width: 100px;
-    border-radius: 10px;
+    height: 54px;
+    width: 250px;
+    border-radius: 40px;
     background: black;
     color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  padding-bottom: 100px;  
+}
+
+.address-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  input {
+    height: 32px;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    width: 40%;
+    padding-left: 8px;
+
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+}
+
+.cardnumber-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  input {
+    height: 32px;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    width: 40%;
+    padding-left: 8px;
+
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  // grid-template-rows: [cardnumber-s] 1fr [cardnumber-e] 1fr;
+  // width: 80%;
+
+  label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  input {
+    height: 32px;
+    border: 2px solid #e8e8e8;
+    border-radius: 4px;
+    width: 40%;
+    padding-left: 8px;
+
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.cardnumber {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  input {
+    width: 60%;
+  }
+
+  &__details {
+    display: grid;
+    width: 70%;
+    grid-template-columns: [names-s] 2fr [names-e exp-s] 1fr [exp-e cvv-s] 1fr [cvv-e];
+
+    &__name {
+      grid-column: names-s/names-e;
+      input {
+        width: 80%;
+      }
+    }
+    &__exp {
+      grid-column: exp-s/exp-e;
+    }
+    &__cvv {
+      grid-column: cvv-s/cvv-e;
+    }
   }
 }
