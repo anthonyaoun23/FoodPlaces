@@ -267,7 +267,6 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 6px;
-
   }
 }
 
@@ -288,7 +287,7 @@ body {
     border-radius: 100px;
     margin-top: 28px;
     position: relative;
-  background: white;
+    background: white;
 
     -webkit-box-shadow: 4px 4px 47px 4px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 4px 4px 47px 4px rgba(0, 0, 0, 0.1);
@@ -317,7 +316,6 @@ body {
 .information {
   display: flex;
   flex-direction: row;
-
 }
 
 .price {
@@ -330,7 +328,6 @@ body {
 }
 
 .details {
-
   // margin-top: 4px;
   font-weight: 700;
   text-align: center;
@@ -349,7 +346,7 @@ body {
 
 .cart-checkout {
   position: relative;
-  background: #F8F8F8;
+  background: #f8f8f8;
   height: 15vh;
   align-items: center;
   justify-items: center;
@@ -379,7 +376,7 @@ body {
   font-weight: 700;
   height: 42px;
   width: 130px;
-  background: #F8F8F8;
+  background: #f8f8f8;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 50px;
@@ -389,7 +386,6 @@ body {
   padding-top: 200px;
   display: grid;
   grid-column: 1fr [paiment-s] 1fr [paiment-e] 1fr;
-
 }
 
 .paiment {
@@ -409,8 +405,8 @@ body {
     border-radius: 4px;
     height: auto;
     width: 40vw;
-    padding-left: 100px; 
-    padding-top: 100px; 
+    padding-left: 100px;
+    padding-top: 100px;
     padding-bottom: 100px;
     margin-bottom: 100px;
     h1 {
@@ -422,7 +418,6 @@ body {
       margin-bottom: 60px;
       padding-right: 100px;
     }
-    
   }
 
   &__method {
@@ -431,8 +426,8 @@ body {
     border-radius: 4px;
     height: auto;
     width: 40vw;
-    padding-left: 100px; 
-    padding-top: 100px; 
+    padding-left: 100px;
+    padding-top: 100px;
     padding-bottom: 100px;
     margin-bottom: 100px;
     h1 {
@@ -461,7 +456,7 @@ body {
 
   &__checkout {
     // position: relative;
-    background: #F8F8F8;
+    background: #f8f8f8;
     height: auto;
     width: 40vw;
     align-items: flex-start;
@@ -472,10 +467,10 @@ body {
     display: flex;
     flex-direction: column;
     // grid-template-rows: 1fr 1fr 1fr;
-  
+
     // font-size: 24px;
-    padding-left: 100px; 
-    padding-top: 100px;   
+    padding-left: 100px;
+    padding-top: 100px;
   }
 }
 
@@ -493,7 +488,6 @@ body {
   // width: 128px;
   height: 40px;
   margin-bottom: 90px;
-
 
   &__form {
     width: 100%;
@@ -516,10 +510,8 @@ body {
       background: black;
       border-radius: 4px;
       cursor: pointer;
-
     }
   }
-
 }
 
 .pay {
@@ -533,7 +525,7 @@ body {
     font-size: 20px;
     font-weight: 600;
   }
-  padding-bottom: 100px;  
+  padding-bottom: 100px;
 }
 
 .address-info {
@@ -558,7 +550,6 @@ body {
     font-size: 16px;
     margin-bottom: 8px;
   }
-
 }
 
 .cardnumber-info {
@@ -634,6 +625,69 @@ body {
     }
     &__cvv {
       grid-column: cvv-s/cvv-e;
+    }
+  }
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url("./thomas-tucker-391058-unsplash.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.menu {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [menuHeader-s] 40% [menuHeader-e menuMenu-s] 60% [menuMenu-e];
+
+  &__header {
+    grid-row: menuHeader-s/menuHeader-e;
+  }
+
+  &__menu {
+    grid-row: menuMenu-s/menuMenu-e;
+  }
+
+  &__image-container {
+    height: 85%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      // margin-bottom: -50%;
+    }
+  }
+  &__restaurant-card {
+    float: left;
+    position: relative;
+    margin-top: -14%;
+    margin-left: 10vw;
+    padding: 48px;
+    border-radius: 4px;
+    // z-index: 99999;
+    background: white;
+  }
+
+  &__bar {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 64px;
     }
   }
 }
