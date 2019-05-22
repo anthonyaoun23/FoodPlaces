@@ -262,7 +262,7 @@ body {
 
 .cart-checkout {
   position: relative;
-  background: #F8F8F8;
+  background: #f8f8f8;
   height: 15vh;
   align-items: center;
   justify-items: center;
@@ -287,7 +287,7 @@ body {
   font-weight: 700;
   height: 42px;
   width: 130px;
-  background: #F8F8F8;
+  background: #f8f8f8;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 50px; }
@@ -347,7 +347,7 @@ body {
     display: flex;
     flex-direction: row; }
   .paiment__checkout {
-    background: #F8F8F8;
+    background: #f8f8f8;
     height: auto;
     width: 40vw;
     align-items: flex-start;
@@ -472,3 +472,50 @@ body {
       grid-column: exp-s/exp-e; }
     .cardnumber__details__cvv {
       grid-column: cvv-s/cvv-e; }
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #b61924;
+  background-image: url("./thomas-tucker-391058-unsplash.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+
+.menu {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [menuHeader-s] 40% [menuHeader-e menuMenu-s] 60% [menuMenu-e]; }
+  .menu__header {
+    grid-row: menuHeader-s/menuHeader-e; }
+  .menu__menu {
+    grid-row: menuMenu-s/menuMenu-e; }
+  .menu__image-container {
+    height: 85%; }
+    .menu__image-container img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+  .menu__restaurant-card {
+    float: left;
+    position: relative;
+    margin-top: -14%;
+    margin-left: 10vw;
+    padding: 48px;
+    border-radius: 4px;
+    background: white; }
+  .menu__bar {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    justify-content: center;
+    align-items: center; }
+    .menu__bar a {
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 64px; }
