@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="restoListPage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -15,17 +16,25 @@
         <div class=navbar>
             <div class=navbar_container>
                 <div class=nav_bar_logo>
-                    <p>hello</p>
+                    <img src="../assets/favicon.png" style="width: 28px;height:28px">
                 </div>
-                    <ul class=navbar_ul>
-                        <li><a href="somewhere.html">HOME</a></li>
-                        <li><a href="somewhere.html">RESTAURANTS</a></li>
-                        <li><a href="somewhere.html">CONTACT US</a></li>
-                    </ul>
+                <ul class=navbar_ul>
+                    <li><a href="somewhere.html">HOME</a></li>
+                    <li><a href="somewhere.html">RESTAURANTS</a></li>
+                    <li><a href="somewhere.html">CONTACT US</a></li>
+                </ul>
                 <div class=nav_action_buttons>
-                    <img src="../assets/icons8-search-32.png" style="width: 28px;height: 28px;">
-                    <img src="../assets/icons8-contacts-32.png" style="width: 28px;height: 28px;">
-                    <img src="../assets/icons8-shopping-cart-24.png" style="width: 28px;height: 28px;">
+                    <div class=action_button>
+                        <img class=action_button src="../assets/icons8-search-32.png" style="width: 28px;height: 28px;">
+                    </div>
+                    <div class=action_button>
+                        <img class=action_button src="../assets/icons8-contacts-32.png"
+                            style="width: 28px;height: 28px;">
+                    </div>
+                    <div class=action_button>
+                        <img class=action_button src="../assets/icons8-shopping-cart-24.png"
+                            style="width: 28px;height: 28px;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,24 +44,26 @@
             <div class=card>
                 <div class=card_inner>
                     <div class=card_front>
-                        <img src=../assets/pic1.jpg style="width:300px;height:200px">
-                        <h2>Mc Donalds</h2>
-                    </div>
-
-                    <div class=card_back>
-                        <div class=card_back_content_top>
-                            <h2>McDonalds</h2>
-                            <p>Burgers - Fries</p>
-                            <p>200 Rideau st.</p>
-                            <div class=card_back_content_bottom>
-                                <p>1$-16$</p>
-                                <div class=card_back_rating>
-                                    <p>4 Stars</p>
+                        <div class=card_front_img>
+                            <img src=../assets/mcd_front_pic.jpg style="width:300px;height:200px">
+                        </div>
+                        <div class=card_front_info>
+                            <h2 style="padding:0px; margin: 0px;">Mc Donalds</h2>
+                            <h3 style="padding:0px; margin:0px;">99 Rideau st.</h3>
+                            <p style="padding:0px; margin: 0px;">Sand - Witches</p>
+                            <div class="card_front_info_bottom">
+                                <p
+                                    style="padding:3px;background: #57a772;width:30%;color:white;border-radius: 10px;font-weight: 500;">
+                                    1$ -16$</p>
+                                <div class="card_front_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
 
@@ -62,24 +73,26 @@
             <div class=card>
                 <div class=card_inner>
                     <div class=card_front>
-                        <img src=../assets/pic1.jpg style="width:300px;height:200px">
-                        <h2>Shawarma King</h2>
-                    </div>
-
-                    <div class=card_back>
-                        <div class=card_back_content_top>
-                            <h2>Shawarma King</h2>
-                            <p>Shawarmas... jeez look at the name</p>
-                            <p>197 Rideau st.</p>
-                            <div class=card_back_content_bottom>
-                                <p>10$-16$</p>
-                                <div class=card_back_rating>
-                                    <p>4 Stars</p>
+                        <div class=card_front_img>
+                            <img src=../assets/sunday_school_front_pic.jpg style="width:300px;height:200px">
+                        </div>
+                        <div class=card_front_info>
+                            <h2 style="padding:0px; margin: 0px;">Sunday School</h2>
+                            <h3 style="padding:0px; margin:0px;">456 Montfort st.</h3>
+                            <p style="padding:0px; margin: 0px;">Ice Cream</p>
+                            <div class="card_front_info_bottom">
+                                <p
+                                    style="padding:3px;background: #57a772;width:30%;color:white;border-radius: 10px;font-weight: 500;">
+                                    5$ -20$</p>
+                                <div class="card_front_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
 
@@ -89,24 +102,26 @@
             <div class=card>
                 <div class=card_inner>
                     <div class=card_front>
-                        <img src=../assets/pic1.jpg style="width:300px;height:200px">
-                        <h2>Fathers and Sons</h2>
-                    </div>
-
-                    <div class=card_back>
-                        <div class=card_back_content_top>
-                            <h2>Fathers and Sons</h2>
-                            <p>Bar</p>
-                            <p>198 Rideau st.</p>
-                            <div class=card_back_content_bottom>
-                                <p>16$-40$</p>
-                                <div class=card_back_rating>
-                                    <p>4 Stars</p>
+                        <div class=card_front_img>
+                            <img src=../assets/shawarma_front_pic.jpg style="width:300px;height:200px">
+                        </div>
+                        <div class=card_front_info>
+                            <h2 style="padding:0px; margin: 0px;">Shawarma King</h2>
+                            <h3 style="padding:0px; margin:0px;">199 Rideau st.</h3>
+                            <p style="padding:0px; margin: 0px;">Lebanese food</p>
+                            <div class="card_front_info_bottom">
+                                <p
+                                    style="padding:3px;background: #57a772;width:30%;color:white;border-radius: 10px;font-weight: 500;">
+                                    12$ -25$</p>
+                                <div class="card_front_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
 
@@ -116,24 +131,26 @@
             <div class=card>
                 <div class=card_inner>
                     <div class=card_front>
-                        <img src=../assets/pic1.jpg style="width:300px;height:200px">
-                        <h2>Subway</h2>
-                    </div>
-
-                    <div class=card_back>
-                        <div class=card_back_content_top>
-                            <h2>Subway</h2>
-                            <p>Sand - Witches</p>
-                            <p>199 Rideau st.</p>
-                            <div class=card_back_content_bottom>
-                                <p>5$-20$</p>
-                                <div class=card_back_rating>
-                                    <p>4 Stars</p>
+                        <div class=card_front_img>
+                            <img src=../assets/pub_front_pic.jpg style="width:300px;height:200px">
+                        </div>
+                        <div class=card_front_info>
+                            <h2 style="padding:0px; margin: 0px;">Father's and Sons's</h2>
+                            <h3 style="padding:0px; margin:0px;">200 Osgood st.</h3>
+                            <p style="padding:0px; margin: 0px;">Pub</p>
+                            <div class="card_front_info_bottom">
+                                <p
+                                    style="padding:3px;background: #57a772;width:30%;color:white;border-radius: 10px;font-weight: 500;">
+                                    10$ -40$</p>
+                                <div class="card_front_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
 
@@ -143,51 +160,59 @@
             <div class=card>
                 <div class=card_inner>
                     <div class=card_front>
-                        <img src=../assets/pic2.jpg style="width:300px;height:200px">
-                        <h2>Sunday School</h2>
-                    </div>
-
-                    <div class=card_back>
-                        <div class=card_back_content_top>
-                            <h2>Sunday School</h2>
-                            <p>Ice cream</p>
-                            <p>195 Rideau st.</p>
-                            <div class=card_back_content_bottom>
-                                <p>1$-25$</p>
-                                <div class=card_back_rating>
-                                    <p>5 Stars</p>
+                        <div class=card_front_img>
+                            <img src=../assets/pic3.jpg style="width:300px;height:200px">
+                        </div>
+                        <div class=card_front_info>
+                            <h2 style="padding:0px; margin: 0px;">Greek on wheels</h2>
+                            <h3 style="padding:0px; margin:0px;"> 156 St.joseph blv.</h3>
+                            <p style="padding:0px; margin: 0px;">Greek takeout</p>
+                            <div class="card_front_info_bottom">
+                                <p
+                                    style="padding:3px;background: #57a772;width:30%;color:white;border-radius: 10px;font-weight: 500;">
+                                    8$ -27$</p>
+                                <div class="card_front_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
+
+
             </div>
 
             <div class=card>
                 <div class=card_inner>
                     <div class=card_front>
-                        <img src=../assets/pic3.jpg style="width:300px;height:200px">
-                        <h2>Burger King</h2>
-                    </div>
-
-                    <div class=card_back>
-                        <div class=card_back_content_top>
-                            <h2>Burger King</h2>
-                            <p>Burgers - Fries</p>
-                            <p>196 Rideau st.</p>
-                            <div class=card_back_content_bottom>
-                                <p>1$-16$</p>
-                                <div class=card_back_rating>
-                                    <p>3.5 Stars</p>
+                        <div class=card_front_img>
+                            <img src=../assets/burger_lover_front_pic.jpg style="width:300px;height:200px">
+                        </div>
+                        <div class=card_front_info>
+                            <h2 style="padding:0px; margin: 0px;">Burger lovers</h2>
+                            <h3 style="padding:0px; margin:0px;">435 Laurier st.</h3>
+                            <p style="padding:0px; margin: 0px;">Burger joint</p>
+                            <div class="card_front_info_bottom">
+                                <p
+                                    style="padding:3px;background: #57a772;width:30%;color:white;border-radius: 10px;font-weight: 500;">
+                                    12$ -19$</p>
+                                <div class="card_front_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
