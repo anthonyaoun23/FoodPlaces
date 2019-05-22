@@ -20,11 +20,11 @@ h2, h1,h3, p, li a {
     flex-direction: column;
 }
 
+/* Navbar */
+
 .nav_bar_logo{
     width:10%;
 }
-
-
 
 .nav_action_buttons{
     width: 10%;
@@ -37,7 +37,6 @@ h2, h1,h3, p, li a {
 .action_button:hover{
     background-color: #57a772;
 }
-
 .navbar_container{
     width: 80%;
     padding:0;
@@ -47,11 +46,9 @@ h2, h1,h3, p, li a {
     justify-content: space-around;
 
 }
-
-a {
+.nav_option{
     height: 100%;
 }
-
 .navbar {
     display: flex;
     justify-content: center;
@@ -63,7 +60,6 @@ a {
     -moz-box-shadow: 0px 7px 5px -1px rgba(148,148,148,1);
     box-shadow: 0px 7px 5px -1px rgba(148,148,148,1);
 }
-
 .navbar_ul{
     display: flex;
     align-items: center;
@@ -73,10 +69,7 @@ a {
     padding:0;
     overflow: hidden;
 }
-
-
-
-li a {
+.nav_option {
         display: block;
         color: black;
         text-align: center;
@@ -85,9 +78,11 @@ li a {
         text-decoration: none;
 }
 
-li a:hover {
+.nav_option:hover {
     background-color: #57a772;
 }
+
+/*Navbar End*/
 
 .card_list{
     width: 70%;
