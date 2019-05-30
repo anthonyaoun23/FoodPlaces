@@ -19,6 +19,7 @@ Date de remise: Jeudi, le 6 juin 2019
 - [ ] Calculer le total
 - [ ] Entrer les informations de la carte de crédit/débit
 
+
 # Devoir de laboratoire #1
 Site web statique: commande de nourriture
 
