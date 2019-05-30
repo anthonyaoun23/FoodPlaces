@@ -14,32 +14,32 @@ Date de remise: Jeudi, le 23 mai 2019
 
 ## Exigences
 Créer les pages statiques suivantes (en utilisant seulement HTML et CSS)
-- [ ] Page d’accueil
-- [ ] Liste de restaurants
-- [ ] Page de menu
+- [x] Page d’accueil
+- [x] Liste de restaurants
+- [x] Page de menu
 - [x] Page de commande (panier)
 - [x] Page de confirmation de paiement
 
 ## Page d’accueil
-- [ ] Cette page contiendra le logo du restaurant (votre propre création ou le logo de l’université)
+- [x] Cette page contiendra le logo du restaurant (votre propre création ou le logo de l’université)
 - [x] Une liste de sélection de villes
 - [x] Une barre de recherche
 - [x] Un panneau pour sélectionner le type de repas (Petit déjeuner, lunch, dîner, à emporter, boissons,...)
 
 ## Page avec liste de restaurants
 Cette page aura la liste de restaurants avec de brefs détails comme: 
-- [ ] La note moyenne attribuée au restaurant
-- [ ] Une photo de couverture du restaurant
-- [ ] L’adresse
-- [ ] Le type de cuisine
-- [ ] Les prix minimum et maximum o Heures
+- [x] La note moyenne attribuée au restaurant
+- [x] Une photo de couverture du restaurant
+- [x] L’adresse
+- [x] Le type de cuisine
+- [x] Les prix minimum et maximum o Heures
 
 ## Page de Menu
 Cette page disposera de la liste de plats servis par le restaurant avec les détails suivant: 
-- [ ] Nom du plat (exemple: Pizzas, poutine,...)
-- [ ] Prix par plat
-- [ ] Photo de la nourriture (optionnel)
-- [ ] Bouton pour ajouter le plat dans le panier
+- [x] Nom du plat (exemple: Pizzas, poutine,...)
+- [x] Prix par plat
+- [x] Photo de la nourriture (optionnel)
+- [x] Bouton pour ajouter le plat dans le panier
 
 ## Page de commande
 Cette page aura une liste d’articles ajoutés dans le panier et avec comme détails par exemple: 
