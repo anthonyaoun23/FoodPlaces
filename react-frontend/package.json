@@ -18,8 +18,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "BROWSER=google-chrome npm start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "devserver": "live-server --browser=google-chrome"
 }
