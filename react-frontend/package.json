@@ -9,6 +9,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "0.9.5",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
@@ -21,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "BROWSER=google-chrome npm start",
-    "node-sass": "node-sass sass/main.scss css/main.css -w", 
+    "node-sass": "node-sass src/style/sass/main.scss src/style/main.css -w",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
