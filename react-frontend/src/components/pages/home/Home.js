@@ -28,7 +28,7 @@ export default class Home extends Component {
                 <div className="search__category styled-input">
                   {/* <!-- <input type="tel" placeholder="Italian & Pizza" required /> --> */}
                   <select className="category-select">
-                    <option className="disabled" disabled selected value="books"
+                    <option className="disabled" disabled defaultChecked value="books"
                       >Select Food Category</option
                     >
                     <option value="books">Italian & Pizza</option>
@@ -41,7 +41,7 @@ export default class Home extends Component {
                 </div>
                 <div className="search__city styled-input">
                   <select className="city-select">
-                    <option className="disabled" disabled selected value="books"
+                    <option className="disabled" disabled defaultChecked value="books"
                       >Select City</option
                     >
                     <option value="books">Ottawa</option>
