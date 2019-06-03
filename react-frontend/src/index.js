@@ -13,6 +13,10 @@ import { getAllProducts } from './actions';
 import App from './App';
 import './style/App.css';
 
+const Comp = () => (
+  <Provider store={store}><App/></Provider>
+)
+
 const middleware = [ thunk ];
 // if (ProcessingInstruction.env.NODE_ENV !== 'production') {
 //   middleware.push(createLogger());
@@ -27,6 +31,6 @@ const store = createStore(
 store.dispatch(getAllProducts());
 
 ReactDOM.render(
-  <Provider store={store}><App/></Provider>,
+  Comp(),
   document.getElementById('root')
 );
