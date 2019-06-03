@@ -11,6 +11,9 @@ A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants
 - [ ] Split Cart page into components
 
 ### Less Important
+- [ ] Setup babel
+- [ ] Setup webpack
+- [ ] Setup airbnb eslint
 - [ ] Clean folder structure
 - [ ] Add navbar to all pages
 - [ ] Add favicon to all pages
