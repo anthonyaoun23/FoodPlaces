@@ -3,7 +3,7 @@ import React from 'react';
 import TestProductsContainer from './TestProductsContainer';
 import TestCartContainer from './TestCartContainer';
 
-const Test = () => {
+const Test = () => (
     <div>
         <h2>Test add to cart and checkout functionality</h2>
         <hr/>
@@ -11,6 +11,6 @@ const Test = () => {
         <hr/>
         <TestCartContainer />
     </div>
-}
+)
 
 export default Test;
