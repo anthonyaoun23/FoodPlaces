@@ -14,9 +14,10 @@ import App from './App';
 import './style/App.css';
 
 const middleware = [ thunk ];
-if (ProcessingInstruction.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger());
-}
+// if (ProcessingInstruction.env.NODE_ENV !== 'production') {
+//   middleware.push(createLogger());
+// }
+middleware.push(createLogger());
 
 const store = createStore(
   reducer,
