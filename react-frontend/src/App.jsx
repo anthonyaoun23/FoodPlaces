@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './style/App.css';
+import './style/main.css';
 
 import Navbar from './components/common/Navbar.js';
 import Footer from './components/common/Footer.js';
@@ -23,7 +24,7 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/cart' component={Home} />
+            <Route exact path='/cart' component={Cart} />
             <Route exact path='/payment' component={Payment} />
             <Route exact path='/list' component={RestoList} />
             <Route exact path='/menu' component={RestoMenu} />

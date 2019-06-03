@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import bgImage from '../../../assets/thomas-tucker-391058-unsplash.jpg';
-import '../../../style/main.css'
 
 export default class Home extends Component {
     render() {
