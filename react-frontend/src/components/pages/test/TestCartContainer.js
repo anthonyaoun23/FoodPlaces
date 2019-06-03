@@ -7,7 +7,7 @@ import { getTotal, getCartProducts } from '../../../reducers';
 import TestCart from './TestCart';
 
 const TestCartContainer = ({ products, total , checkout }) => (
-    <TestCart products={products} total={total} onCheckoutClicked={checkout(products)} />
+    <TestCart products={products} total={total} onCheckoutClicked={() => checkout(products)} />
 );
 
 TestCartContainer.propTypes = {
