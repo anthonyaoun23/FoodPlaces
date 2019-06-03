@@ -35,11 +35,11 @@ class Navbar extends Component {
                     </div>
                     <div className="action_button">
                         {/* <img className="action_button" src={contactIcon} style={{width: "28px", height: "28px"}} /> */}
-                        <Link><img className="action_button" src={contactIcon} style={{width: "28px", height: "28px"}} /></Link>
+                        <Link to='/contact'><img className="action_button" src={contactIcon} style={{width: "28px", height: "28px"}} /></Link>
                     </div>
                     <div className="action_button">
                         {/* <img className="action_button" src={cartIcon} style={{width: "28px", height: "28px"}} /> */}
-                        <Link><img className="action_button" src={cartIcon} style={{width: "28px", height: "28px"}} /></Link>
+                        <Link to='/cart'><img className="action_button" src={cartIcon} style={{width: "28px", height: "28px"}} /></Link>
                     </div>
                 </div>
             </div>
