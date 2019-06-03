@@ -4,6 +4,7 @@ A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants
 
 ## TODOs
 ### Important
+
 - [x] Add React-Router
 - [ ] Setup Restaurants JSON
 - [ ] Setup Redux properly
@@ -11,6 +12,7 @@ A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants
 - [ ] Split Cart page into components
 
 ### Less Important
+
 - [ ] Setup babel
 - [ ] Setup webpack
 - [ ] Setup airbnb eslint
