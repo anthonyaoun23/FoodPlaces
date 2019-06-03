@@ -5,7 +5,7 @@ import './style/App.css';
 
 import Navbar from './components/common/Navbar.js';
 import Footer from './components/common/Footer.js';
-import Home from './components/pages/home/Home.js';
+import Home from './components/pages/home/Home';
 import Cart from './components/pages/cart/Cart';
 import Payment from './components/pages/payment/Payment';
 import RestoList from './components/pages/resto-list/RestoList';

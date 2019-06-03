@@ -473,15 +473,6 @@ body {
     .cardnumber__details__cvv {
       grid-column: cvv-s/cvv-e; }
 
-#particles-js {
-  width: 100%;
-  height: 100%;
-  background-color: #b61924;
-  background-image: url("./thomas-tucker-391058-unsplash.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat; }
-
 .menu {
   margin-top: 200px;
   display: grid;
