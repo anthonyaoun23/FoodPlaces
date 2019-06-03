@@ -2,12 +2,12 @@
 
 A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants. Never order pizza "because what else is there?" again.
 
-## TODOs
+## TODOs (Anthony)
 ### Important
 
 - [x] Add React-Router
 - [ ] Setup Restaurants JSON
-- [ ] Setup Redux properly
+- [x] Setup Redux properly
 - [ ] Split Payment page into components
 - [ ] Split Cart page into components
 
