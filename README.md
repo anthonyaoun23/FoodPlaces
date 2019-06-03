@@ -2,7 +2,21 @@
 
 A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants. Never order pizza "because what else is there?" again.
 
+# Devoir de laboratoire #2
+Site web réactif pour la commande de nourriture
+
+Date de remise: Jeudi, le 6 juin 2019
+
+## Exigences
+
+- [ ] Naviguer d’une page à l’autre
+- [ ] Ajouter des articles du menu à votre commande
+- [ ] Retirer des articles de votre commande
+- [ ] Calculer le total
+- [ ] Entrer les informations de la carte de crédit/débit
+
 ## TODOs (Anthony)
+
 ### Important
 
 - [x] Add React-Router
@@ -20,17 +34,6 @@ A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants
 - [ ] Add navbar to all pages
 - [ ] Add favicon to all pages
 
-# Devoir de laboratoire #2
-Site web réactif pour la commande de nourriture
-
-Date de remise: Jeudi, le 6 juin 2019
-
-## Exigences
-- [ ] Naviguer d’une page à l’autre
-- [ ] Ajouter des articles du menu à votre commande
-- [ ] Retirer des articles de votre commande
-- [ ] Calculer le total
-- [ ] Entrer les informations de la carte de crédit/débit
 
 
 # Devoir de laboratoire #1
