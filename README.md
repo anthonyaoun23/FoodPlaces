@@ -1,4 +1,4 @@
-![Logo](logo.png)
+![Logo](/react-frontend/src/assetslogo.png)
 
 A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants. Never order pizza "because what else is there?" again.
 
@@ -6,6 +6,13 @@ A curated list of places to eat in ottawa/gatineau. Find the nearest restaurants
 - [ ] Clean folder structure
 - [ ] Add navbar to all pages
 - [ ] Add favicon to all pages
+
+## TODOs
+- [x] Add React-Router
+- [ ] Setup Restaurants JSON
+- [ ] Setup Redux properly
+- [ ] Split Payment page into components
+- [ ] Split Cart page into components
 
 # Devoir de laboratoire #2
 Site web réactif pour la commande de nourriture
