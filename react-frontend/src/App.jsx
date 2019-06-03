@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './style/App.css';
 
@@ -21,11 +21,14 @@ class App extends Component {
           <Navbar />
         </div>
         <div>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/cart' component={Home} />
-          <Route exact path='/payment' component={Payment} />
-          <Route exact path='/list' component={RestoList} />
-          <Route exact path='/menu' component={RestoMenu} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/cart' component={Home} />
+            <Route exact path='/payment' component={Payment} />
+            <Route exact path='/list' component={RestoList} />
+            <Route exact path='/menu' component={RestoMenu} />
+            <Route render={ () => <h1>404 Error</h1> } />
+          </Switch>
         </div>
       </Router>
     );
