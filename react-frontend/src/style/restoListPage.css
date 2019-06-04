@@ -1,4 +1,4 @@
-body {
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -20,70 +20,6 @@ h2, h1,h3, p, li a {
     flex-direction: column;
     width:100%;
 }
-
-/* Navbar */
-
-.nav_bar_logo{
-    width:10%;
-}
-
-.nav_action_buttons{
-    width: 10%;
-    display: flex;
-    justify-content: space-around;
-}
-.action_button{
-    padding:6px;
-}
-.action_button:hover{
-    background-color: #57a772;
-}
-.navbar_container{
-    width: 80%;
-    padding:0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-}
-.nav_option{
-    height: 100%;
-}
-.navbar {
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    width: 100%;
-    margin:0;
-    padding:0;
-    -webkit-box-shadow: 0px 7px 5px -1px rgba(148,148,148,1);
-    -moz-box-shadow: 0px 7px 5px -1px rgba(148,148,148,1);
-    box-shadow: 0px 7px 5px -1px rgba(148,148,148,1);
-}
-.navbar_ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding:0;
-    overflow: hidden;
-}
-.nav_option {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 16px 16px;
-        height: 100%;
-        text-decoration: none;
-}
-
-.nav_option:hover {
-    background-color: #57a772;
-}
-
-/*Navbar End*/
 
 .card_list{
 display: flex;

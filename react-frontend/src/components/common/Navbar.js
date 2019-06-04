@@ -5,7 +5,7 @@ import searchIcon from "../../assets/icons8-search-32.png";
 import contactIcon from "../../assets/icons8-contacts-32.png";
 import cartIcon from "../../assets/icons8-shopping-cart-24.png";
 
-import '../../style/restoListPage.css'
+import '../../style/navbar.css'
 
 class Navbar extends Component {
 
@@ -13,7 +13,6 @@ class Navbar extends Component {
 
 
     render () {
-        console.log('here');
         return (
             <div className="navbar">
             <div className="navbar_container">
