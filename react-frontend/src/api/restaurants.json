@@ -1,6 +1,6 @@
 
     { "id" : 1,
-        "restaurantName" : "McDonalds",
+        "title" : "McDonalds",
         "address" : "99 Rideau st.",
         "foodType" : "FastFood",
         "rating" : 4,
