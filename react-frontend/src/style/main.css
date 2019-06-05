@@ -24,6 +24,9 @@ body {
     grid-template-columns: [pitch-s] 45% [pitch-e image-s] 1fr [image-e];
     grid-template-rows: [s] 1fr [e]; }
 
+.rccs {
+  margin: 0 !important; }
+
 .header {
   height: 1200px; }
   .header__pitch {
