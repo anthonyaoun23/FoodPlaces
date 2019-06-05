@@ -13,6 +13,7 @@
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "0.9.5",
+    "react-select": "^3.0.4",
     "react-star-rating": "^1.4.2",
     "react-star-rating-component": "^1.4.1",
     "redux": "^4.0.1",
