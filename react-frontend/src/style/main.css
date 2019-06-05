@@ -17,12 +17,10 @@ body {
   text-rendering: optimizeLegibility;
   background: white; }
 
-.layout {
-  margin-top: 100px; }
-  .layout__header {
-    display: grid;
-    grid-template-columns: [pitch-s] 45% [pitch-e image-s] 1fr [image-e];
-    grid-template-rows: [s] 1fr [e]; }
+.layout__header {
+  display: grid;
+  grid-template-columns: [pitch-s] 45% [pitch-e image-s] 1fr [image-e];
+  grid-template-rows: [s] 1fr [e]; }
 
 .rccs {
   margin: 0 !important; }
