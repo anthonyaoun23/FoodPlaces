@@ -122,12 +122,12 @@ export default class Home extends Component {
                 >
                   Select City
                 </option>
-                <option value="ottawa">Ottawa</option>
-                <option value="montreal">Montreal</option>
-                <option value="toronto">Toronto</option>
-                <option value="waterloo">Waterloo</option>
-                <option value="kingston">Kingston</option>
-                <option value="hamilton">Hamilton</option>
+                <option value="Ottawa">Ottawa</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Waterloo">Waterloo</option>
+                <option value="Kingston">Kingston</option>
+                <option value="Hamilton">Hamilton</option>
               </select>
               <i className="fas fa-ellipsis-h" />
             </div>

@@ -7,8 +7,8 @@ class CreditCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: "",
-      name: "",
+      cardNumber: "",
+      cardName: "",
       expiry: "",
       cvc: "",
       focused: ""
@@ -18,9 +18,19 @@ class CreditCard extends Component {
   }
 
   handleChange(event) {
+    this.props.onChange(event);
     const name = event.target.name;
+    if(name=='cardName') {
+      this.setState({ 'cardName': event.target.value, focused: name });
+
+    } else if (name=='cardNumber'){
+    this.setState({ 'cardNumber': event.target.value, focused: name });
+      
+    } else {
+      this.setState({ [name]: event.target.value, focused: name });
+
+    }
     // console.log(name);
-    this.setState({ [name]: event.target.value, focused: name });
     // console.log(this.state);
   }
 
@@ -40,8 +50,8 @@ class CreditCard extends Component {
 
           <div className="creditcard" style={{marginBottom: '32px'}}>
           <Cards
-            number={this.state.number}
-            name={this.state.name}
+            number={this.state.cardNumber}
+            name={this.state.cardName}
             expiry={this.state.expiry}
             cvc={this.state.cvc}
             focused={this.state.focused}
@@ -52,7 +62,7 @@ class CreditCard extends Component {
             <div className="cardnumber">
               <input
                 type="text"
-                name="number"
+                name="cardNumber"
                 value={this.state.number}
                 onChange={this.handleChange}
               />
@@ -62,7 +72,7 @@ class CreditCard extends Component {
                 <label>Name on Card:</label>
                 <input
                   type="text"
-                  name="name"
+                  name="cardName"
                   value={this.state.name}
                   onChange={this.handleChange}
                 />

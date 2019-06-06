@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import searchIcon from "../../assets/icons8-search-32.png";
 import contactIcon from "../../assets/icons8-contacts-32.png";
 import cartIcon from "../../assets/icons8-shopping-cart-24.png";
+import logo from "../../assets/logo.png";
 
 import '../../style/navbar.css'
 
@@ -17,7 +18,7 @@ class Navbar extends Component {
             <div className="navbar">
             <div className="navbar_container">
                 <div className="nav_bar_logo">
-                    <img src="../../assets/logo.png" style={{width: "28px", height: "28px"}} />
+                    <img src={logo} style={{width: "140px", height: "28px"}} />
                 </div>
                 <ul className="navbar_ul">
                     {/* <li><a className="nav_option" href="somewhere.html">HOME</a></li>

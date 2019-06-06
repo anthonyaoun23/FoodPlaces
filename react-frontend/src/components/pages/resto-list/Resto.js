@@ -2,6 +2,10 @@ import React from 'react';
 import { Component } from 'react';
 import StarRatingComponent from 'react-star-rating-component';
 import { FaStar } from 'react-icons/fa';
+
+const images = require.context('../../../assets/', true);
+
+
 import FrontImg from "../../../assets/mcd_front_pic.jpg"
 
 
@@ -17,16 +21,19 @@ export default class Resto extends Component {
 
     componentDidMount() {
         this.setState(this.props);
+        
         this.FrontImg = "../../../assets/"+this.props.pictureSource;
 
     }
 
     render() {
+        // const img = ;
+
         return(
             <div className="container">
             <div className="card">
             <div className="card_front_img">
-                <img src={this.FrontImg} style={{width:"300px",height:"200px"}}/>
+                <img src={images(`./${this.props.pictureSource}`)} style={{width:"300px",height:"200px"}}/>
                 <div className="card_front_hours">
                     <h4>Mo: 24hrs</h4>
                     <h4>Tue: 24hrs</h4>
