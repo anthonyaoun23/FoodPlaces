@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CreditCard from './CreditCard';
 
 export default class Payment extends Component {
     render() {
@@ -42,36 +43,7 @@ export default class Payment extends Component {
 
                     </div>
 
-                    <div className="paiment__method">
-                        <h1>Payment Method</h1>
-                        <div className="payment-info">
-                            <p>FoodPlaces accepts all major credit and debit cards:</p> <i className="fab fa-cc-visa"></i> <i className="fab fa-cc-mastercard"></i> <i className="fab fa-cc-discover"></i> <i className="fab fa-cc-amex"></i>
-                        </div>
-
-                        <form action="">
-                            <div className="payment-details">
-                                <div className="cardnumber">
-                                    <label for="fullname">Card Number</label>
-                                    <input id="fullname" type="text"/>
-                                </div>
-                                <div className="cardnumber__details">
-                                    <div className="cardnumber-info cardnumber__details__name">
-                                        <label for="nameoncard">Name on Card</label>
-                                        <input id="nameoncard" type="text"/>
-                                    </div>
-                                    <div className="cardnumber-info cardnumber__details__exp">
-                                        <label for="icity">Expiry Date</label>
-                                        <input id="icity" type="text"/>
-                                    </div>
-                                    <div className="cardnumber-info cardnumber__details__cvv">
-                                        <label for="province">CVV Code</label>
-                                        <input id="province" type="text"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-            
-                    </div>
+                    <CreditCard />
 
                     <div className="paiment__checkout">
                         <p className="checkout__summary">Order Summary</p>
