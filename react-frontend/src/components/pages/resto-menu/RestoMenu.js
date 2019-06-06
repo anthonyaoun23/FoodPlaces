@@ -44,10 +44,14 @@ export default class RestoMenu extends React.Component {
                 }
             })
             if(!found) {
-                cart.push({id: id, restoId: this.state.restaurant.id,amt: newamt})
+                shop.getProductById(this.state.restaurant.id, id, product => {
+                    cart.push({id: id, restoId: this.state.restaurant.id,amt: newamt,product:product})
+                })
             }
         } else {
-            cart.push({id: id, restoId:this.state.restaurant.id,amt: newamt})
+            shop.getProductById(this.state.restaurant.id, id, product => {
+                cart.push({id: id, restoId: this.state.restaurant.id,amt: newamt,product:product})
+            })
         }
         
 

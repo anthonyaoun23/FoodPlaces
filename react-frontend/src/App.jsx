@@ -31,9 +31,9 @@ class App extends Component {
             <Route exact path='/cart' component={Cart} />
             <Route exact path='/payment' component={Payment} />
             <Route exact path='/list' component={RestoContainer} />
-            <Route path='/:handle' component={RestoMenu} />
-            <Route exact path='/menu' component={RestoMenu} />
             <Route exact path='/restaurants/:query?' component={Restaurants} />
+            <Route exact path='/:handle' component={RestoMenu} />
+            <Route exact path='/menu' component={RestoMenu} />
             <Route render={ () => <h1>404 Error</h1> } />
           </Switch>
         </div>
