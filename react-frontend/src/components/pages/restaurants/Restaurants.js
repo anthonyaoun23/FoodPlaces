@@ -99,8 +99,7 @@ class Restaurants extends Component {
         );
       });
     }
-
-    return <h1>Nothing in cart.</h1>;
+    return <h1>No results found...</h1>;
   }
 }
 
