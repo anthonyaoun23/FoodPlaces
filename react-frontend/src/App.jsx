@@ -11,6 +11,7 @@ import Cart from './components/pages/cart/Cart';
 import Payment from './components/pages/payment/Payment';
 import RestoList from './components/pages/resto-list/RestoList';
 import RestoMenu from './components/pages/resto-menu/RestoMenu';
+import Restaurants from './components/pages/restaurants/Restaurants';
 
 import Test from './components/pages/test/Test';
 
@@ -30,6 +31,7 @@ class App extends Component {
             <Route exact path='/payment' component={Payment} />
             <Route exact path='/list' component={RestoList} />
             <Route exact path='/menu' component={RestoMenu} />
+            <Route exact path='/restaurants/:query?' component={Restaurants} />
             <Route render={ () => <h1>404 Error</h1> } />
           </Switch>
         </div>

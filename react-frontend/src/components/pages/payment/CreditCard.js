@@ -19,9 +19,9 @@ class CreditCard extends Component {
 
   handleChange(event) {
     const name = event.target.name;
-    console.log(name);
+    // console.log(name);
     this.setState({ [name]: event.target.value, focused: name });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   render() {
