@@ -10,11 +10,28 @@ export default class Cart extends Component {
   constructor(props){
     super(props);
     this.itemRemove = this.itemRemove.bind(this);
+    this.getTotalItems = this.getTotalItems.bind(this);
     this.state = {
       'cart':[],
       totalItems:0,
       totalPrice:0
     }
+  }
+
+  getTotalItems(){
+    let totalPrice = 0;
+    let totalItems = 0;
+    console.log(this.state.cart)
+    this.state.cart.map(item => {
+      totalItems+=item.amt;
+      totalPrice+=item.product.price*item.amt;
+
+    })
+
+    this.setState({
+      totalItems:totalItems,
+      totalPrice:totalPrice
+    })
   }
 
 
@@ -23,7 +40,8 @@ export default class Cart extends Component {
     var cart = JSON.parse(localStorage.getItem('cart'))
     this.setState({
       'cart':cart==null?[]:cart
-        })
+        }, this.getTotalItems
+        )
   }
 
 
@@ -31,26 +49,28 @@ export default class Cart extends Component {
     localStorage.setItem('cart', JSON.stringify(this.state.cart))
   }
 
-  itemRemove(id) {
+  itemRemove(id, restoId) {
     let { cart } = this.state;
     let newCart = []
-    let found = false;
         cart.map(obj => {
-            if(obj.id == id && obj.restoId == this.state.restaurant.id && !found){
-                obj.amt = obj.amt-=1
-                found= true;
-                if(obj.amt!=0){
-                  newCart.push(obj)
-                }
+            if(obj.id === id && obj.restoId === restoId){
+                obj.amt = obj.amt-1
+                console.log('removed', obj)
+            }
+            if(obj.amt!==0){
+              console.log("added", obj)
+              newCart.push(obj)
             }
         })
     
-
+    console.log('new cart',newCart)
     this.setState({
-        "cart":newCart
+        cart:newCart
     })
-    this.forceUpdate()
+    localStorage.setItem('cart', JSON.stringify(newCart))
+    this.getTotalItems();
   }
+
 
 
   render() {
@@ -61,6 +81,7 @@ export default class Cart extends Component {
             <h1>Cart</h1>
 
             {this.state.cart.map(item => {
+              console.log('rendering',item)
               return (
                 <CartItem product={item.product} item={item} itemRemove={this.itemRemove}/>
               )
@@ -70,8 +91,8 @@ export default class Cart extends Component {
 
         </div>
         <div className="cart-checkout">
-          <p className="cart-product-num">Number of Products: 3</p>
-          <p className="cart-total">Total: $98.46</p>
+          <p className="cart-product-num">Number of Products: {this.state.totalItems}</p>
+          <p className="cart-total">Total: ${this.state.totalPrice}</p>
           <div className="cart-button-container">
             <Link to="/payment"><button className="cart-button">Checkout</button></Link>
           </div>

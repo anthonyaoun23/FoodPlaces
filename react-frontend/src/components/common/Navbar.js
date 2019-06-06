@@ -30,7 +30,7 @@ class Navbar extends Component {
                 <div className="nav_action_buttons">
                     <div className="action_button">
                         {/* <img className="action_button" src={searchIcon} style={{width: "28px", height: "28px"}} /> */}
-                        <Link to='/'><img className="action_button" src={searchIcon} style={{width: "28px", height: "28px"}} /></Link>
+                        <Link to='/'><img className="action_button" onClick={localStorage.clear()}src={searchIcon} style={{width: "28px", height: "28px"}} /></Link>
                     </div>
                     <div className="action_button">
                         {/* <img className="action_button" src={contactIcon} style={{width: "28px", height: "28px"}} /> */}

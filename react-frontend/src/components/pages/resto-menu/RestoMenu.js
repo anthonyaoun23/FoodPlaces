@@ -45,12 +45,12 @@ export default class RestoMenu extends React.Component {
             })
             if(!found) {
                 shop.getProductById(this.state.restaurant.id, id, product => {
-                    cart.push({id: id, restoId: this.state.restaurant.id,amt: newamt,product:product})
+                    cart.push({id: id, restoId: this.state.restaurant.id,amt: newamt,product:product, restaurant:this.state.restaurant})
                 })
             }
         } else {
             shop.getProductById(this.state.restaurant.id, id, product => {
-                cart.push({id: id, restoId: this.state.restaurant.id,amt: newamt,product:product})
+                cart.push({id: id, restoId: this.state.restaurant.id,amt: newamt,product:product, restaurant:this.state.restaurant})
             })
         }
         
@@ -61,7 +61,6 @@ export default class RestoMenu extends React.Component {
     }
 
     componentWillUnmount(){
-        console.log(this.state.cart)
         localStorage.setItem('cart', JSON.stringify(this.state.cart))
     }
 

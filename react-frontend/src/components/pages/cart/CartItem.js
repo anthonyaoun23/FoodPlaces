@@ -7,6 +7,7 @@ export default class CartItem extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            item: null,
             product:null
         }
     }
@@ -14,21 +15,18 @@ export default class CartItem extends React.Component{
     
   componentDidMount() {
             this.setState({
+                item: this.props.item,
                 product: this.props.product
                   })
             
         }
 
-//   componentDidUpdate(props) {
-//       if(props.product!=undefined){
-//           console.log('here')
-//           this.setState({
-//               product:props.product
-//           })
-//       }
-
-//   }
-
+    UNSAFE_componentWillReceiveProps(){
+        this.setState({
+            item: this.props.item,
+            product: this.props.product
+          })
+}
 
     render(){
         if(this.state.product==null){
@@ -44,11 +42,11 @@ export default class CartItem extends React.Component{
         </div>
         <div className="item__info info">
           <p className="info__name">place</p>
-          <h4 className="info__title">{this.state.product.title}</h4>
+          <h4 className="info__title">{this.props.product.title}</h4>
           <div className="information">
             <div className="info__price">
               <div className="price">
-                <p className="price__text">${this.state.product.price}</p>
+                <p className="price__text">${this.props.product.price}</p>
               </div>
             </div>
             <button className="info__details" onClick={() => {
@@ -63,7 +61,8 @@ export default class CartItem extends React.Component{
         </div>
         <div className="item__actions">
           <button className="action-button" onClick={() => {
-              this.props.itemRemove()
+              console.log('clicked on' , this.state.item.id,this.state.item.restoId)
+              this.props.itemRemove(this.props.item.id,this.props.item.restoId)
             }}>
             <i className="far fa-times-circle" />
           </button>
