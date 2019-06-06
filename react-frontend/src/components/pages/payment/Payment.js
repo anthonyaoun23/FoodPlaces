@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CreditCard from "./CreditCard";
 import shop from "../../../api/shop";
 
+import { Link } from "react-router-dom";
+
 import PaymentItem from "./PaymentItem";
 
 export default class Payment extends Component {
@@ -9,10 +11,23 @@ export default class Payment extends Component {
     super(props);
     this.state = {
       restaurants: [],
-      loading: true
+      loading: true,
+
+      name: "",
+      address: "",
+      city: "",
+      province: "",
+      postal: "",
+      number: "",
+      cardNumber: "",
+      cardName: "",
+      expiry: "",
+      cvc: ""
     };
 
     this.fetchResults = this.fetchResults.bind(this);
+    this.confirm = this.confirm.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -26,75 +41,54 @@ export default class Payment extends Component {
     });
   }
 
+  confirm() {
+    if (
+      this.state.name != "" &&
+      this.state.address != "" &&
+      this.state.city != "" &&
+      this.state.province != "" &&
+      this.state.postal != "" &&
+      this.state.number != "" &&
+      this.state.cardNumber != "" &&
+      this.state.cardName != "" &&
+      this.state.expiry != "" &&
+      this.state.cvc != ""
+    ) {
+      this.setState({ confirm: true });
+    } else {
+      window.alert("Please fill out all information.");
+    }
+  }
+
   fetchResults() {
-    const cart = JSON.parse(localStorage.getItem('cart'));
+    const cart = JSON.parse(localStorage.getItem("cart"));
     console.log(cart);
-    let cartItems = [], totalAmount = 0;
+    let cartItems = [],
+      totalAmount = 0;
 
     const { restaurants } = this.state;
 
     cart.map(cartItem => {
-        const restaurantTitle = restaurants[cartItem.restoId-1].title;
-        cartItems.push({cartItem, restaurantTitle});
-        totalAmount += cartItem.amt * cartItem.product.price;
-    })
+      const restaurantTitle = restaurants[cartItem.restoId - 1].title;
+      cartItems.push({ cartItem, restaurantTitle });
+      totalAmount += cartItem.amt * cartItem.product.price;
+    });
 
     // console.log(cartItems, totalAmount);
-    this.setState({cartItems, totalAmount})
+    this.setState({ cartItems, totalAmount });
+  }
 
-    // cart.map(cartItem => {
-    //     const restoId = cartItem.restoId-1;
-    //     const restaurant = restaurants[restoId];
-    //     // console.log(restoId);
-    //     restaurant['menuCategory'].map(category => {
-    //         category.items.map(item => {
-    //             if(item.id === cartItem.id){
-    //                 cartItems.push(item);
-    //             }
-    //         })
-    //     })
-    // })
-
-    // let { search } = this.props.location;
-    // search = search.substring(1);
-    // search = search.split("&");
-    // const strSearch = search[0];
-    // const city = search[1].charAt(0).toUpperCase() + search[1].slice(1);
-    // const type = search[2];
-
-    // const { restaurants } = this.state;
-    // let results = new Set();
+  handleChange(event) {
+    const target = event.target.name;
+    console.log(target);
+    // console.log(name);
+    this.setState({ [target]: event.target.value, focused: name });
     // console.log(this.state);
-    // if (strSearch) {
-    //   restaurants.map((restaurant, index) => {
-    //     if (restaurant.title === strSearch) {
-    //       results.add(index);
-    //     }
-    //   });
-    // }
-
-    // if (city) {
-    //   restaurants.map((restaurant, index) => {
-    //     if (restaurant.city === city) {
-    //       results.add(index);
-    //     }
-    //   });
-    // }
-
-    // if (type) {
-    //   restaurants.map((restaurant, index) => {
-    //     if (restaurant.type === type) {
-    //       results.add(index);
-    //     }
-    //   });
-    // }
-
-    // this.setState({ results, loading: false });
   }
 
   render() {
-      const { cartItems, totalAmount } = this.state;
-      console.log(cartItems);
+    const { cartItems, totalAmount, confirm } = this.state;
+    console.log(this.state);
     return (
       <div className="layout_paiment">
         <div className="paiment">
@@ -113,44 +107,85 @@ export default class Payment extends Component {
             <form action="">
               <div className="address-info">
                 <label for="fullname">Full Name</label>
-                <input id="fullname" type="text" />
+                <input
+                  id="fullname"
+                  name="name"
+                  type="text"
+                  value={this.state.name}
+                  onChange={this.handleChange}
+                />
               </div>
               <div className="address-info">
                 <label for="address">Address Line</label>
-                <input id="address" type="text" />
+                <input
+                  id="address"
+                  name="address"
+                  type="text"
+                  value={this.state.address}
+                  onChange={this.handleChange}
+                />
               </div>
               <div className="address-info">
                 <label for="icity">City</label>
-                <input id="icity" type="text" />
+                <input
+                  id="icity"
+                  name="city"
+                  type="text"
+                  value={this.state.city}
+                  onChange={this.handleChange}
+                />
               </div>
               <div className="address-info">
                 <label for="province">Province</label>
-                <input id="province" type="text" />
+                <input
+                  id="province"
+                  name="province"
+                  type="text"
+                  value={this.state.province}
+                  onChange={this.handleChange}
+                />
               </div>
               <div className="address-info">
                 <label for="postal">Postal Code</label>
-                <input id="postal" type="text" />
+                <input
+                  id="postal"
+                  name="postal"
+                  type="text"
+                  value={this.state.postal}
+                  onChange={this.handleChange}
+                />
               </div>
               <div className="address-info">
                 <label for="phone">Phone Number</label>
-                <input id="phone" type="phone" />
+                <input
+                  id="phone"
+                  name="number"
+                  type="phone"
+                  value={this.state.number}
+                  onChange={this.handleChange}
+                />
               </div>
             </form>
           </div>
 
-          <CreditCard />
+          <CreditCard onChange={this.handleChange} />
 
           <div className="paiment__checkout">
             <p className="checkout__summary">Order Summary</p>
             <div className="checkout__list">
-
-                {
-                    cartItems && cartItems.map(item => {
-                        console.log(item)
-                        return <PaymentItem key={item.cartItem.product.id} restaurantTitle={item.restaurantTitle} productName={item.cartItem.product.title} amount={item.cartItem.amt} price={item.cartItem.product.price}/>
-                    })
-                }
-              
+              {cartItems &&
+                cartItems.map(item => {
+                  console.log(item);
+                  return (
+                    <PaymentItem
+                      key={item.cartItem.product.id}
+                      restaurantTitle={item.restaurantTitle}
+                      productName={item.cartItem.product.title}
+                      amount={item.cartItem.amt}
+                      price={item.cartItem.product.price}
+                    />
+                  );
+                })}
             </div>
 
             <div className="coupon">
@@ -160,7 +195,15 @@ export default class Payment extends Component {
               </form>
             </div>
             <div className="pay">
-              <button>{`PAY $${totalAmount}.00`}</button>
+              {confirm ? (
+                <Link to="/">
+                  <button onClick={this.purchase}>{`Confirm`}</button>
+                </Link>
+              ) : (
+                <button
+                  onClick={this.confirm}
+                >{`PAY $${totalAmount}.00`}</button>
+              )}
             </div>
           </div>
         </div>

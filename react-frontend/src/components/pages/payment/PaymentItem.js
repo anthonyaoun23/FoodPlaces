@@ -1,7 +1,6 @@
 import React from "react";
 
 const PaymentItem = props => {
-    console.log(props)
   return (
     <div className="cart__item item">
       <div className="item__img img-container">
