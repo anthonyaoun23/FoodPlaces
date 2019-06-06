@@ -9,13 +9,14 @@ import Footer from './components/common/Footer.js';
 import Home from './components/pages/home/Home';
 import Cart from './components/pages/cart/Cart';
 import Payment from './components/pages/payment/Payment';
-import RestoList from './components/pages/resto-list/RestoList';
 import RestoMenu from './components/pages/resto-menu/RestoMenu';
 
 import Test from './components/pages/test/Test';
+import RestoContainer from './components/pages/resto-list/RestoContainer';
 
 
 class App extends Component {
+
   render() {
     return (
       <Router>
@@ -28,8 +29,8 @@ class App extends Component {
             <Route exact path='/test' component={Test} />
             <Route exact path='/cart' component={Cart} />
             <Route exact path='/payment' component={Payment} />
-            <Route exact path='/list' component={RestoList} />
-            <Route exact path='/menu' component={RestoMenu} />
+            <Route exact path='/list' component={RestoContainer} />
+            <Route path='/:handle' component={RestoMenu} />
             <Route render={ () => <h1>404 Error</h1> } />
           </Switch>
         </div>

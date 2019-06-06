@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import cart, * as fromCart from './cart'
 import products, * as fromProducts from './products'
+import { getRestaurants } from "../actions";
 
 export default combineReducers({
   cart,
@@ -18,6 +19,7 @@ export const getTotal = state =>
       0
     )
     .toFixed(2)
+
 
 export const getCartProducts = state =>
   getAddedIds(state).map(id => ({

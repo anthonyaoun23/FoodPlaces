@@ -12,6 +12,18 @@ export const getAllProducts = () => dispatch => {
   })
 }
 
+//Restaurant menu component calls this action to load json
+export const getRestaurant = title => dispatch => {
+  shop.getRestaurant(title, restaurant => {
+    dispatch(receiveResto(restaurant))
+  })
+}
+
+const receiveResto = restaurant => ({
+  type: types.LOAD_RESTAURANTS,
+  restaurant: restaurant
+})
+
 const addToCartUnsafe = productId => ({
   type: types.ADD_TO_CART,
   productId

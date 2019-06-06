@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 export default class Cart extends Component {
+
+
+  componentDidMount() {
+    localStorage.clear()
+  }
   render() {
     return (
       <div className="layout_commande">

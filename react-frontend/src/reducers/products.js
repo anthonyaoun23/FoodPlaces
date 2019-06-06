@@ -54,3 +54,4 @@ export const getProduct = (state, id) =>
 
 export const getVisibleProducts = state =>
   state.visibleIds.map(id => getProduct(state, id))
+
