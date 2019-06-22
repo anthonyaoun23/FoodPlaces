@@ -6,17 +6,11 @@ import { FaStar } from 'react-icons/fa';
 const images = require.context('../../../assets/', true);
 
 
-import FrontImg from "../../../assets/mcd_front_pic.jpg"
-
-
-
 
 export default class Resto extends Component {
 
     constructor(props){
         super(props);
-        // this.FrontImg = "http://localhost:3000/assets/"+this.props.pictureSource;
-
     }
 
     componentDidMount() {
@@ -27,8 +21,6 @@ export default class Resto extends Component {
     }
 
     render() {
-        // const img = ;
-
         return(
             <div className="container">
             <div className="card">

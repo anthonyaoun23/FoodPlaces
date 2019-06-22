@@ -1,6 +1,5 @@
 import React from 'react';
-import shop from '../../../api/shop'
-
+import { IoMdTrash } from 'react-icons/io';
 
 
 export default class CartItem extends React.Component{

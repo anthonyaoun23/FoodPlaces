@@ -2,8 +2,6 @@ import React from "react";
 import shop from '../../../api/shop'
 import '../../../style/restoListPage.css';
 import CategoryItem from "./CategoryItem"
-import { FaAddressCard } from "react-icons/fa";
-
 
 export default class RestoMenu extends React.Component {
     constructor(props) {

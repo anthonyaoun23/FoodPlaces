@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import CartItem from "./CartItem";
-import shop from '../../../api/shop'
 import {Link} from 'react-router-dom'
 
 export default class Cart extends Component {
