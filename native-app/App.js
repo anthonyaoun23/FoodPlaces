@@ -10,6 +10,8 @@ import RestoList from "./components/screens/resto-list/RestoList"
 import { Provider } from 'react-redux';
 import store from './store'
 
+import Home from './components/screens/home/Home';
+
 class HomeScreen extends React.Component {
   state = {
     firstQuery: "", clicked: false, checked: 'first', data: [{label: 'Pizza'}, {label: 'Fish'}, {label: "Sushi"}, {label:'Money'}]
@@ -21,24 +23,25 @@ class HomeScreen extends React.Component {
     let selectedButton = this.state.data.find(e => e.selected == true);
     selectedButton = selectedButton ? selectedButton.value : this.state.data[0].label;
     const { firstQuery, clicked, checked } = this.state;
-    return (
-      <View style={styles.container}>
-        <Text>Home Screen</Text>
-        <Searchbar
-          style={{ marginTop: 60 }}
-          placeholder="Search"
-          onChangeText={query => {
-            this.setState({ firstQuery: query });
-          }}
-          value={firstQuery}
-        />
-        <Text>Select Food Type</Text>
-        <Text>Currently Selected: {selectedButton}</Text>
+    return <Home />
+    // return (
+    //   <View style={styles.container}>
+    //     <Text>Home Screen</Text>
+    //     <Searchbar
+    //       style={{ marginTop: 60 }}
+    //       placeholder="Search"
+    //       onChangeText={query => {
+    //         this.setState({ firstQuery: query });
+    //       }}
+    //       value={firstQuery}
+    //     />
+    //     <Text>Select Food Type</Text>
+    //     <Text>Currently Selected: {selectedButton}</Text>
 
 
-        <RadioGroup radioButtons={this.state.data} onPress={this.onPress} />
-      </View>
-    );
+    //     <RadioGroup radioButtons={this.state.data} onPress={this.onPress} />
+    //   </View>
+    // );
   }
 }
 
