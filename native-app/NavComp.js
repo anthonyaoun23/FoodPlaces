@@ -6,7 +6,6 @@ import { createMaterialBottomTabNavigator } from "react-navigation-material-bott
 import Icon from "react-native-vector-icons/Ionicons";
 import RadioGroup from 'react-native-radio-buttons-group';
 import Cart from "./components/screens/cart/Cart"
-import {store} from "./store"
 
 class HomeScreen extends React.Component {
   state = {
@@ -146,7 +145,7 @@ let Nav = createAppContainer(TabNavigator);
 export default class App extends React.Component{
     render() {
         return(
-            <Provider store={store}>
+            <Provider store= {store}>
                 <Nav />
             </Provider>
         )

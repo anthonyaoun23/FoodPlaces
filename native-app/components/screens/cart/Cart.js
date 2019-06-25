@@ -2,16 +2,20 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {connect} from 'react-redux';
 
-const Cart = (props) => (
-    <View style={styles.container}>
-      {props.cartItems.map(item => {
-        return (
-          <Text>{item.name}</Text>
-        )
-      })}
-    </View>
 
-)
+class Cart extends React.Component{
+
+  render(){
+    <View style={styles.container}>
+    {props.cartItems.map(item => {
+      return (
+        <Text>{item.name}</Text>
+      )
+    })}
+  </View>
+
+  }
+}
 
 const mapStateToProps = (state) => {
   return {
