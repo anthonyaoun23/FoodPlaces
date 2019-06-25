@@ -6,13 +6,15 @@ import {connect} from 'react-redux';
 class Cart extends React.Component{
 
   render(){
+    return (
     <View style={styles.container}>
-    {props.cartItems.map(item => {
+    {this.props.cartItems.map(item => {
       return (
         <Text>{item.name}</Text>
       )
     })}
   </View>
+    )
 
   }
 }
@@ -24,7 +26,7 @@ const mapStateToProps = (state) => {
 
 }
 
-export default connect(mapStateToProps)(Cart);
+let CartContainer = connect(mapStateToProps)(Cart);
 
 const styles = StyleSheet.create({
   container: {
@@ -34,3 +36,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default CartContainer;

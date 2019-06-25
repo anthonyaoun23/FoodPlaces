@@ -1,12 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
-import { createBottomTabNavigator, createAppContainer } from "react-navigation";
-import { Searchbar, RadioButton, Provider } from "react-native-paper";
+import { StyleSheet, Text, View } from "react-native";
+import { createAppContainer } from "react-navigation";
+import { Searchbar, RadioButton } from "react-native-paper";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
 import RadioGroup from 'react-native-radio-buttons-group';
-import Cart from "./components/screens/cart/Cart"
-import {store} from "./store"
+import CartContainer from './components/screens/cart/Cart'
+import RestoList from "./components/screens/resto-list/RestoList"
+import { Provider } from 'react-redux';
+import store from './store'
 
 class HomeScreen extends React.Component {
   state = {
@@ -64,24 +66,6 @@ class FoodTypeGroup extends React.Component {
   }
 }
 
-class RestaurantsScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Restaurants Screen</Text>
-      </View>
-    );
-  }
-}
-class CartScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Cart/>
-      </View>
-    );
-  }
-}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -104,7 +88,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
       }
     },
     Restaurants: {
-      screen: RestaurantsScreen,
+      screen: RestoList,
       navigationOptions: {
         tabBarLabel: "Restaurants",
         tabBarIcon: ({ tintColor }) => (
@@ -122,7 +106,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
       }
     },
     Cart: {
-      screen: Cart,
+      screen: CartContainer,
       navigationOptions: {
         tabBarLabel: "Cart",
         tabBarIcon: ({ tintColor }) => (
@@ -143,12 +127,10 @@ const TabNavigator = createMaterialBottomTabNavigator(
 
 let Nav = createAppContainer(TabNavigator);
 
-export default class App extends React.Component{
-    render() {
-        return(
-            <Provider store={store}>
-                <Nav />
-            </Provider>
-        )
-    }
+export default function App() {
+    return (
+      <Provider store={store}>
+        <Nav/>
+      </Provider>
+    );
 }
