@@ -1,13 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {connect} from 'react-redux';
 
-export default function Cart() {
-  return (
+const Cart = (props) => (
     <View style={styles.container}>
-      <Text>Cart Page</Text>
+      {props.cartItems.map(item => {
+        return (
+          <Text>{item.name}</Text>
+        )
+      })}
     </View>
-  );
+
+)
+
+const mapStateToProps = (state) => {
+  return {
+    cartItems : state
+  }
+
 }
+
+export default connect(mapStateToProps)(Cart);
 
 const styles = StyleSheet.create({
   container: {
