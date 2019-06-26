@@ -37,7 +37,7 @@ export default class Home extends React.Component {
         <View style={styles.container}>
           <ScrollView style={styles.scrollViewContainer}>
             <View style={{ paddingTop: 10 }}>
-              <CardList title={"Tus Favoritos"}>
+              <CardList title={"Near You"}>
                 <Card style={styles.card} />
                 <Card style={styles.card} />
                 <Card style={styles.card} />
@@ -46,7 +46,7 @@ export default class Home extends React.Component {
                 <Card style={styles.card} />
                 <Card style={styles.card} />
               </CardList>
-              <CardList title={"Comida Italiana Favorita"}>
+              <CardList title={"Most Popular"}>
                 <Card style={styles.card} />
                 <Card style={styles.card} />
                 <Card style={styles.card} />
@@ -55,7 +55,7 @@ export default class Home extends React.Component {
                 <Card style={styles.card} />
                 <Card style={styles.card} />
               </CardList>
-              <CardList title={"Tus Pizzas Favoritas"}>
+              <CardList title={"Highest Rated"}>
                 <Card style={styles.card} />
                 <Card style={styles.card} />
                 <Card style={styles.card} />
@@ -64,7 +64,7 @@ export default class Home extends React.Component {
                 <Card style={styles.card} />
                 <Card style={styles.card} />
               </CardList>
-              <CardList title={"Tus Tacos Favoritos"}>
+              <CardList title={"Your Favourites"}>
                 <Card style={styles.card} />
                 <Card style={styles.card} />
                 <Card style={styles.card} />

@@ -70,12 +70,12 @@ class Card extends React.Component {
                 </Animated.View>
               </TouchableOpacity>
             </View>
-            <Text style={styles.title}>Alma Verde (Hipódromo)</Text>
-            <Text style={styles.description}>$$ . Saludable</Text>
+            <Text style={styles.title}>Pizza Pizza</Text>
+            <Text style={styles.description}>$$ . Medium</Text>
             <View style={styles.tagContainer}>
               <Tag>25-35 min</Tag>
               <Tag>4.6 (500+)</Tag>
-              <Tag>Costo de envio: MXN 60.00</Tag>
+              <Tag>$8-$30</Tag>
             </View>
           </View>
         </TouchableOpacity>
