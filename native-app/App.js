@@ -5,7 +5,8 @@ import { Searchbar, RadioButton } from "react-native-paper";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
 import RadioGroup from 'react-native-radio-buttons-group';
-import CartContainer from './components/screens/cart/Cart'
+import CartContainer from './components/screens/cart/Cart';
+import Menu from './components/screens/menu/Menu';
 import RestoList from "./components/screens/resto-list/RestoList"
 import { Provider } from 'react-redux';
 import store from './store'
@@ -118,7 +119,8 @@ const TabNavigator = createMaterialBottomTabNavigator(
           </View>
         )
       }
-    }
+    },
+    Menu: { screen: Menu }
   },
   {
     initialRouteName: "Home",

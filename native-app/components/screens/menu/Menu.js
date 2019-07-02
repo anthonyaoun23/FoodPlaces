@@ -5,6 +5,7 @@ import Item from './Item.js'
 
 const Menu = (props) => (
   <View style={styles.container}>
+    <Text>Menu Page</Text>
     <Item onPress={props.addItemToCart}/>
   </View>
 
