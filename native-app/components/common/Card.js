@@ -8,6 +8,7 @@ import {
   Image,
   Animated
 } from "react-native";
+import Menu from '../screens/menu/Menu';
 import { withNavigation } from "react-navigation";
 import Tag from "./Tag";
 import { Ionicons } from "@expo/vector-icons";

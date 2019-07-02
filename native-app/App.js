@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { createAppContainer } from "react-navigation";
+import { createAppContainer, createStackNavigator } from "react-navigation";
 import { Searchbar, RadioButton } from "react-native-paper";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
@@ -92,7 +92,9 @@ const TabNavigator = createMaterialBottomTabNavigator(
       }
     },
     Restaurants: {
-      screen: RestoList,
+      screen: createStackNavigator({
+        main: { screen: RestoList },
+        Menu: { screen: Menu }}),
       navigationOptions: {
         tabBarLabel: "Restaurants",
         tabBarIcon: ({ tintColor }) => (
@@ -120,7 +122,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
         )
       }
     },
-    Menu: { screen: Menu }
+    
   },
   {
     initialRouteName: "Home",
@@ -129,6 +131,8 @@ const TabNavigator = createMaterialBottomTabNavigator(
     barStyle: { backgroundColor: "#3BAD87" }
   }
 );
+
+
 
 let Nav = createAppContainer(TabNavigator);
 
