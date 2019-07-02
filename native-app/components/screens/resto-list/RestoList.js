@@ -1,6 +1,8 @@
 import React from 'react';
-import { ActivityIndicator, StyleSheet, Text, View, FlatList, ListItem } from 'react-native';
+import { ScrollView, ActivityIndicator, StyleSheet, Text, View, FlatList } from 'react-native';
 import store from "../../../api/store.js";
+import Card from "../../common/Card";
+import CardList from "../../common/CardList";
 
 export default class RestoList extends React.Component {
 
@@ -21,13 +23,14 @@ export default class RestoList extends React.Component {
         }else {
             return(
                 // <Text>{this.state.restaurants[0].title}</Text>
-                <View style={styles.container}>  
-                    <FlatList
-                        data={this.state.restaurants}
-                        keyExtractor={(item, index) => index.toString()}
-                        renderItem={this.renderItem}
-
-                    />
+                <View style={styles.container}> 
+                    <ScrollView style={styles.scrollViewContainer}>
+                        {this.state.restaurants.map(restaurant => {
+                            return (
+                                <Card style={styles.card} key={restaurant.id} restaurant={restaurant}/>
+                            )
+                        })}
+                    </ScrollView>
                 </View>
             )
         }
@@ -56,12 +59,26 @@ export default class RestoList extends React.Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems:'center',
-      justifyContent: 'center'
+      backgroundColor: "#eee",
+      alignItems: 'center',
     },
-    horizontal: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      padding: 10
+    searchBar: {
+      marginTop: 60
+    },
+    scrollViewContainer: {
+      flex: 1,
+      backgroundColor: "#eee",
+      marginTop: 100
+    },
+    headerContainer: {
+      position: "absolute",
+      top: 0,
+      width: "100%",
+      height: 0,
+      backgroundColor: "#fff",
+      shadowColor: "rgba(0,0,0,0.1)",
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 1,
+      shadowRadius: 5
     }
-  })
+  });

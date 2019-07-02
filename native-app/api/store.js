@@ -1,14 +1,22 @@
-import _store from "./store.json";
+import data from "./data";
 
 
 const TIMEOUT = 100;
 
 function getRestaurants(cb, timeout){
-    setTimeout(() => cb(_store), timeout || TIMEOUT)
+    console.log(data)
+    setTimeout(() => cb(data), timeout || TIMEOUT)
 }
 
+function getRestaurantByName(title, cb, timeout){
+    data.map(restaurant => {
+        if(restaurant.title.toString().toLowerCase().includes(title.toString().toLowerCase())){
+            setTimeout(() => cb(restaurant), timeout || TIMEOUT)
+        }
+    })
+}
 function getRestaurantById(id, cb, timeout){
-    _store.map(restaurant => {
+    data.map(restaurant => {
         if(restaurant.id == id){
             setTimeout(() => cb(restaurant), timeout || TIMEOUT)
         }

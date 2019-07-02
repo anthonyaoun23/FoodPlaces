@@ -35,6 +35,7 @@ class Card extends React.Component {
   }
 
   render() {
+    const imgSrc = this.props.restaurant.pictureSource;
     return (
       <View style={this.props.style}>
         <TouchableOpacity
@@ -45,10 +46,7 @@ class Card extends React.Component {
             <View>
               <Image
                 style={styles.image}
-                source={{
-                  uri:
-                    "https://cdn.dribbble.com/users/1846841/screenshots/4961950/epi_x.png"
-                }}
+                source={imgSrc}
               />
               <TouchableOpacity
                 hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
@@ -70,12 +68,12 @@ class Card extends React.Component {
                 </Animated.View>
               </TouchableOpacity>
             </View>
-            <Text style={styles.title}>Pizza Pizza</Text>
+            <Text style={styles.title}>{this.props.restaurant.title}</Text>
             <Text style={styles.description}>$$ . Medium</Text>
             <View style={styles.tagContainer}>
               <Tag>25-35 min</Tag>
-              <Tag>4.6 (500+)</Tag>
-              <Tag>$8-$30</Tag>
+              <Tag>{this.props.restaurant.rating}</Tag>
+              <Tag>{`$${this.props.restaurant.priceLow}-${this.props.restaurant.priceHigh}`}</Tag>
             </View>
           </View>
         </TouchableOpacity>
