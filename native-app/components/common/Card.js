@@ -40,7 +40,7 @@ class Card extends React.Component {
       <View style={this.props.style}>
         <TouchableOpacity
           activeOpacity={0.7}
-          onPress={() => this.props.navigation.navigate("Menu")}
+          onPress={() => this.props.navigation.navigate("Menu", this.props.restaurant)}
         >
           <View style={styles.container}>
             <View>

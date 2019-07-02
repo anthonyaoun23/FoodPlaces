@@ -9,6 +9,7 @@ import CartContainer from './components/screens/cart/Cart'
 import RestoList from "./components/screens/resto-list/RestoList"
 import { Provider } from 'react-redux';
 import store from './store'
+import Menu from './components/screens/menu/Menu'
 
 import Home from './components/screens/home/Home';
 
@@ -118,6 +119,9 @@ const TabNavigator = createMaterialBottomTabNavigator(
           </View>
         )
       }
+    },
+    Menu: {
+      screen: Menu
     }
   },
   {
