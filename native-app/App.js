@@ -10,22 +10,32 @@ import Menu from './components/screens/menu/Menu';
 import RestoList from "./components/screens/resto-list/RestoList"
 import { Provider } from 'react-redux';
 import store from './store'
-// import Menu from './components/screens/menu/Menu';
+import Checkout from "./components/screens/checkout/Checkout"
 
-import Home from './components/screens/home/Home';
+import Home from "./components/screens/home/Home";
 
 class HomeScreen extends React.Component {
   state = {
-    firstQuery: "", clicked: false, checked: 'first', data: [{label: 'Pizza'}, {label: 'Fish'}, {label: "Sushi"}, {label:'Money'}]
+    firstQuery: "",
+    clicked: false,
+    checked: "first",
+    data: [
+      { label: "Pizza" },
+      { label: "Fish" },
+      { label: "Sushi" },
+      { label: "Money" }
+    ]
   };
 
-  onPress = data => this.setState({data});
+  onPress = data => this.setState({ data });
 
   render() {
     let selectedButton = this.state.data.find(e => e.selected == true);
-    selectedButton = selectedButton ? selectedButton.value : this.state.data[0].label;
+    selectedButton = selectedButton
+      ? selectedButton.value
+      : this.state.data[0].label;
     const { firstQuery, clicked, checked } = this.state;
-    return <Home />
+    return <Home />;
     // return (
     //   <View style={styles.container}>
     //     <Text>Home Screen</Text>
@@ -40,7 +50,6 @@ class HomeScreen extends React.Component {
     //     <Text>Select Food Type</Text>
     //     <Text>Currently Selected: {selectedButton}</Text>
 
-
     //     <RadioGroup radioButtons={this.state.data} onPress={this.onPress} />
     //   </View>
     // );
@@ -49,11 +58,11 @@ class HomeScreen extends React.Component {
 
 class FoodTypeGroup extends React.Component {
   state = {
-    value: 'first',
+    value: "first"
   };
 
   render() {
-    return(
+    return (
       <RadioButton.Group
         onValueChange={value => this.setState({ value })}
         value={this.state.value}
@@ -67,7 +76,7 @@ class FoodTypeGroup extends React.Component {
           <RadioButton value="second" />
         </View>
       </RadioButton.Group>
-    )
+    );
   }
 }
 
@@ -88,7 +97,8 @@ const TabNavigator = createMaterialBottomTabNavigator(
     Restaurants: {
       screen: createStackNavigator({
         main: { screen: RestoList },
-        Menu: { screen: Menu }}),
+        Menu: { screen: Menu }
+      }),
       navigationOptions: {
         tabBarLabel: "Restaurants",
         tabBarIcon: ({ tintColor }) => (
@@ -106,7 +116,10 @@ const TabNavigator = createMaterialBottomTabNavigator(
       }
     },
     Cart: {
-      screen: CartContainer,
+      screen: createStackNavigator({
+        main: {screen: CartContainer},
+        Checkout: {screen: Checkout}
+      }),
       navigationOptions: {
         tabBarLabel: "Cart",
         tabBarIcon: ({ tintColor }) => (
@@ -115,8 +128,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
           </View>
         )
       }
-    },
-    
+    }
   },
   {
     initialRouteName: "Home",
@@ -126,14 +138,12 @@ const TabNavigator = createMaterialBottomTabNavigator(
   }
 );
 
-
-
 let Nav = createAppContainer(TabNavigator);
 
 export default function App() {
-    return (
-      <Provider store={store}>
-        <Nav/>
-      </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <Nav />
+    </Provider>
+  );
 }
