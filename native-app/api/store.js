@@ -4,7 +4,6 @@ import data from "./data";
 const TIMEOUT = 100;
 
 function getRestaurants(cb, timeout){
-    console.log(data)
     setTimeout(() => cb(data), timeout || TIMEOUT)
 }
 

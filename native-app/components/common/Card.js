@@ -8,6 +8,7 @@ import {
   Image,
   Animated
 } from "react-native";
+import Menu from '../screens/menu/Menu';
 import { withNavigation } from "react-navigation";
 import Tag from "./Tag";
 import { Ionicons } from "@expo/vector-icons";
@@ -40,8 +41,9 @@ class Card extends React.Component {
       <View style={this.props.style}>
         <TouchableOpacity
           activeOpacity={0.7}
-          onPress={() => this.props.navigation.navigate("Menu", this.props.restaurant)}
-        >
+          onPress={() => this.props.navigation.navigate("Menu", {
+            restaurant: this.props.restaurant
+          })}>
           <View style={styles.container}>
             <View>
               <Image
@@ -69,10 +71,10 @@ class Card extends React.Component {
               </TouchableOpacity>
             </View>
             <Text style={styles.title}>{this.props.restaurant.title}</Text>
-            <Text style={styles.description}>$$ . Medium</Text>
+            <Text style={styles.description}>{this.props.restaurant.address}</Text>
             <View style={styles.tagContainer}>
               <Tag>25-35 min</Tag>
-              <Tag>{this.props.restaurant.rating}</Tag>
+              <Tag>{this.props.restaurant.rating} Stars</Tag>
               <Tag>{`$${this.props.restaurant.priceLow}-${this.props.restaurant.priceHigh}`}</Tag>
             </View>
           </View>

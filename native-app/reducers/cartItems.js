@@ -6,7 +6,16 @@ const cartItems = (state = [], action) => {
 
 
         case "REMOVE_FROM_CART":
-            return state.filter(cartItem => cartItem.id !== action.payload.id)
+            let found = false
+            let newState = []
+            state.map(item => {
+                if(item.id === action.payload.id && !found){
+                    found = true;
+                } else {
+                    newState.push(item)
+                }
+            })
+            return newState
 
     }
     return state

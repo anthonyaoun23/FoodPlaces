@@ -1,15 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { createAppContainer } from "react-navigation";
+import { createAppContainer, createStackNavigator } from "react-navigation";
 import { Searchbar, RadioButton } from "react-native-paper";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
 import RadioGroup from 'react-native-radio-buttons-group';
-import CartContainer from './components/screens/cart/Cart'
+import CartContainer from './components/screens/cart/Cart';
+import Menu from './components/screens/menu/Menu';
 import RestoList from "./components/screens/resto-list/RestoList"
 import { Provider } from 'react-redux';
 import store from './store'
-import Menu from './components/screens/menu/Menu'
+// import Menu from './components/screens/menu/Menu';
 
 import Home from './components/screens/home/Home';
 
@@ -70,13 +71,6 @@ class FoodTypeGroup extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  }
-});
 
 const TabNavigator = createMaterialBottomTabNavigator(
   {
@@ -92,7 +86,9 @@ const TabNavigator = createMaterialBottomTabNavigator(
       }
     },
     Restaurants: {
-      screen: RestoList,
+      screen: createStackNavigator({
+        main: { screen: RestoList },
+        Menu: { screen: Menu }}),
       navigationOptions: {
         tabBarLabel: "Restaurants",
         tabBarIcon: ({ tintColor }) => (
@@ -104,9 +100,9 @@ const TabNavigator = createMaterialBottomTabNavigator(
             />
           </View>
         ),
-        activeColor: "#615af6",
-        inactiveColor: "#46f6d7",
-        barStyle: { backgroundColor: "#67baf6" }
+        activeColor: "#f0edf6",
+        inactiveColor: "#226557",
+        barStyle: { backgroundColor: "#3BAD87" }
       }
     },
     Cart: {
@@ -120,9 +116,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
         )
       }
     },
-    Menu: {
-      screen: Menu
-    }
+    
   },
   {
     initialRouteName: "Home",
@@ -131,6 +125,8 @@ const TabNavigator = createMaterialBottomTabNavigator(
     barStyle: { backgroundColor: "#3BAD87" }
   }
 );
+
+
 
 let Nav = createAppContainer(TabNavigator);
 
