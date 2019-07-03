@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator, SectionList } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, SectionList, Button } from 'react-native';
 import {connect} from 'react-redux';
 import { getParam } from 'react-navigation'
 import Item from './Item.js'
@@ -58,7 +58,7 @@ class Menu extends React.Component {
         </View>
         <View style={styles.itemList}>
           <SectionList sections={this.state.sections} 
-          renderItem={({item}) => <Item onPress={this.props.addItemToCart} title={item.title} price={item.price} description={item.description}/>}
+          renderItem={({item}) => <Item onPress={this.props.addItemToCart} id={item.id} quantity={item.quantity} inventory={item.inventory} title={item.title} price={item.price} description={item.description}/>}
           renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
           ItemSeparatorComponent = {separator}
           keyExtractor={(item, index) => index}/>

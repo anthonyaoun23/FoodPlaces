@@ -1,7 +1,9 @@
+import { ToastAndroid } from 'react-native'
 const cartItems = (state = [], action) => {
     switch(action.type){
 
         case "ADD_TO_CART":
+            ToastAndroid.show('Added '+ action.payload.name + ' to cart', ToastAndroid.SHORT);
             return [...state, action.payload]
 
 

@@ -6,6 +6,16 @@ import store from "../../../api/store.js"
 export default class Item extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            item: {
+                id : this.props.id,
+                name: this.props.title,
+                price: this.props.price,
+                inventory: this.props.inventory,
+                quantity: this.props.quantity,
+                description: this.props.description,
+            }
+        }
     }
 
     render() {
@@ -23,7 +33,10 @@ export default class Item extends React.Component {
                 <Text style={styles.description}>{this.props.description}</Text>
                 <View style={styles.tagContainer}>
                   <Text style= {styles.Tag}>${this.props.price}</Text>
-                  <Button title="Add to Cart" onPress={this.props.onPress} style={styles.addToCart}/>
+                  <TouchableOpacity style={styles.addToCart} 
+                  onPress={() => {this.props.onPress(this.state.item)}}>
+                    <Text>Add to Cart</Text>
+                  </TouchableOpacity>
                 </View>
               </View>
           </View>
@@ -45,6 +58,7 @@ const styles = StyleSheet.create({
       shadowRadius: 5
     },
     addToCart: {
+        alignSelf:"flex-start",
     marginTop: 10,
     marginRight: 10,
     padding: 5,
@@ -54,8 +68,9 @@ const styles = StyleSheet.create({
       height: 150
     },
     tagContainer: {
-      flexDirection: "row",
-      flexWrap: "wrap"
+        justifyContent: "space-between",
+        flexDirection: "row",
+        flexWrap: "wrap"
     },
     title: {
         fontSize: 16,
