@@ -6,11 +6,14 @@ import CartCard from "./CartCard";
 import { Button } from "react-native-paper";
 
 class Cart extends React.Component {
-  state = { cart: {}, totalItems: 0, totalPrice: 0 };
+  // state = { cart: {}, totalItems: 0, totalPrice: 0 };
+
+  update = () => this.setState();
 
   render() {
     const { cartItems } = this.props;
-    let { cart, totalItems, totalPrice } = this.state;
+    let cart= {}; let totalItems= 0; let totalPrice= 0;
+    // let { cart, totalItems, totalPrice } = this.state;
     let items = new Set();
 
     cartItems.map(item => {
@@ -24,6 +27,7 @@ class Cart extends React.Component {
         cart[id] = {
           name,
           price,
+          id,
           quantity: 1
         };
       }
@@ -47,9 +51,12 @@ class Cart extends React.Component {
               return (
                 <CartCard
                   key={cart[item].id}
+                  id={cart[item].id}
                   name={cart[item].name}
                   price={cart[item].price}
                   quantity={cart[item].quantity}
+                  deleteItem={this.props.removeItemFromCart}
+                  update={this.update}
                 />
               );
             })
@@ -97,8 +104,13 @@ const mapStateToProps = state => {
     cartItems: state
   };
 };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeItemFromCart: (product) => dispatch({type: "REMOVE_FROM_CART", payload: product})
+  }
+}
 
-let CartContainer = connect(mapStateToProps)(Cart);
+let CartContainer = connect(mapStateToProps, mapDispatchToProps)(Cart);
 
 const styles = StyleSheet.create({
   container: {

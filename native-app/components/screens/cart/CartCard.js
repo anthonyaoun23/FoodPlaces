@@ -14,7 +14,7 @@ import Tag from "../../common/Tag";
 
 export default class CartCard extends React.Component {
   render() {
-    const { name, price, quantity, style } = this.props;
+    const { name, price, quantity, style, id } = this.props;
     return (
       <View style={styles.container}>
         <View style={styles.textContainer}>
@@ -25,7 +25,11 @@ export default class CartCard extends React.Component {
         <TouchableOpacity
           hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
           activeOpacity={0.7}
-          onPress={() => console.log("remove item")}
+          onPress={() => {
+            console.log("KEY: ",id);
+            this.props.deleteItem({"id": id});
+            this.props.update();
+          }}
           style={styles.iconContainer}
         >
           <Animated.View>
