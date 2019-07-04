@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button,TouchableOpacity } from 'react-native';
 import store from "../../../api/store.js"
+import { connect } from "react-redux";
 
 
-export default class Item extends React.Component {
+
+class Item extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -18,23 +20,23 @@ export default class Item extends React.Component {
         }
     }
 
+    addToCart() {
+        this.props.onPress(this.state.item)
+        console.log(this.props.cartItems)
+        
+    }
+
     render() {
-        //const imgSrc = this.props.restaurant.pictureSource;
+        const { cartItems } = this.props
         return (
           <View>
               <View style={styles.container}>
-                <View>
-                  {/* <Image
-                    style={styles.image}
-                    source={imgSrc}
-                  /> */}
-                </View>
                 <Text style={styles.title}>{this.props.title}</Text>
                 <Text style={styles.description}>{this.props.description}</Text>
                 <View style={styles.tagContainer}>
                   <Text style= {styles.Tag}>${this.props.price}</Text>
                   <TouchableOpacity style={styles.addToCart} 
-                  onPress={() => {this.props.onPress(this.state.item)}}>
+                  onPress={() => {this.addToCart()}}>
                     <Text>Add to Cart</Text>
                   </TouchableOpacity>
                 </View>
@@ -43,6 +45,14 @@ export default class Item extends React.Component {
         );
       }
 }
+
+const mapStateToProps = state => {
+    return {
+      cartItems: state
+    };
+  };
+  
+  export default connect(mapStateToProps)(Item);
 
 
 

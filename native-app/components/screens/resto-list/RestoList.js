@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, ActivityIndicator, StyleSheet, Text, View, FlatList } from 'react-native';
+import { ScrollView, ActivityIndicator, StyleSheet, Text, View, Image } from 'react-native';
 import store from "../../../api/store.js";
 import Card from "../../common/Card";
 import CardList from "../../common/CardList";
@@ -22,8 +22,8 @@ export default class RestoList extends React.Component {
             )
         }else {
             return(
-                // <Text>{this.state.restaurants[0].title}</Text>
-                <View style={styles.container}> 
+                <View style={styles.container}>
+                        <Text style={styles.title}>Restaurants</Text>
                     <ScrollView style={styles.scrollViewContainer}>
                         {this.state.restaurants.map(restaurant => {
                             return (
@@ -57,28 +57,31 @@ export default class RestoList extends React.Component {
 
 
 const styles = StyleSheet.create({
+    titleContainer: {
+        flex: 1,
+        marginBottom: 0,
+        paddingVertical: 0,
+        flexDirection: "row",
+        alignItems: "flex-start",
+        
+    },
+    title: {
+        alignSelf: "baseline",
+        marginLeft: 12,
+        padding: 5,
+        fontSize: 30,
+        fontWeight: "bold",
+        textAlign: "left"
+    },
     container: {
       flex: 1,
       backgroundColor: "#eee",
       alignItems: 'center',
     },
-    searchBar: {
-      marginTop: 60
-    },
     scrollViewContainer: {
-      flex: 1,
-      backgroundColor: "#eee",
-      marginTop: 100
-    },
-    headerContainer: {
-      position: "absolute",
-      top: 0,
-      width: "100%",
-      height: 0,
-      backgroundColor: "#fff",
-      shadowColor: "rgba(0,0,0,0.1)",
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 1,
-      shadowRadius: 5
+        marginTop: 0,
+        paddingTop: 0,
+        flex: 1,
+        backgroundColor: "#eee",
     }
   });

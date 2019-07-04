@@ -49,6 +49,7 @@ class Card extends React.Component {
               <Image
                 style={styles.image}
                 source={imgSrc}
+                resizeMode='cover'
               />
               <TouchableOpacity
                 hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}

@@ -98,14 +98,14 @@
         ]
     },
     { "id" : 3,
-        "title" : "Popyes",
+        "title" : "Boston Pizza",
         "address" : "99 Rideau st.",
         "city" : "Ottawa",
         "foodType" : "FastFood",
         "rating" : 4,
         "priceLow": 5,
         "priceHigh" : 10,
-        "pictureSource": require("../assets/mcd_front_pic.jpg"),
+        "pictureSource": require("../assets/dan-gold-105699-unsplash.jpg"),
         "menuCategory": [
             {
                 "id":1,
@@ -196,14 +196,14 @@
         ]
     },
     { "id" : 5,
-        "title" : "TimHortons",
+        "title" : "Shawarma King",
         "address" : "99 Rideau st.",
         "city" : "Kingston",
         "foodType" : "FastFood",
         "rating" : 4,
         "priceLow": 10,
         "priceHigh" : 16,
-        "pictureSource": require("../assets/mcd_front_pic.jpg"),
+        "pictureSource": require("../assets/christine-siracusa-363257-unsplash.jpg"),
         "menuCategory": [
             {
                 "id":1,
@@ -245,14 +245,14 @@
         ]
     },
     { "id" : 6,
-        "title" : "Tai Express",
+        "title" : "Pizza Pizza",
         "address" : "99 Rideau st.",
         "city" : "Ottawa",
         "foodType" : "FastFood",
         "rating" : 4,
         "priceLow": 10,
         "priceHigh" : 30,
-        "pictureSource": require("../assets/mcd_front_pic.jpg"),
+        "pictureSource": require("../assets/thomas-tucker-391058-unsplash.jpg"),
         "menuCategory": [
             {
                 "id":1,
