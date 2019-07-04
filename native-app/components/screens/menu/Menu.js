@@ -58,7 +58,7 @@ class Menu extends React.Component {
         </View>
         <View style={styles.itemList}>
           <SectionList sections={this.state.sections} 
-          renderItem={({item}) => <Item onPress={this.props.addItemToCart} id={item.id} quantity={item.quantity} inventory={item.inventory} title={item.title} price={item.price} description={item.description}/>}
+          renderItem={({item}) => <Item removeFromCart={this.props.removeItemFromCart} addToCart={this.props.addItemToCart} id={item.id} quantity={item.quantity} inventory={item.inventory} title={item.title} price={item.price} description={item.description}/>}
           renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
           ItemSeparatorComponent = {separator}
           keyExtractor={(item, index) => index}/>
@@ -76,7 +76,9 @@ const separator = () => (
 const mapDispatchToProps = (dispatch) => {
   return {
     addItemToCart: (product) => dispatch({type: 
-    "ADD_TO_CART", payload: product})
+    "ADD_TO_CART", payload: product}),
+    removeItemFromCart: (product) => dispatch({type:
+    "REMOVE_FROM_CART", payload: product})
   }
 }
 export default connect(null, mapDispatchToProps)(Menu);

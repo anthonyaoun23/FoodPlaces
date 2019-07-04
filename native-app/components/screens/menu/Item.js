@@ -21,15 +21,27 @@ class Item extends React.Component {
     }
 
     addToCart() {
-        this.props.onPress(this.state.item)
-        console.log(this.props.cartItems)
-        
+        this.props.addToCart(this.state.item)     
+    }
+
+    removeFromCart() {
+        this.props.removeFromCart(this.state.item)
+    }
+
+    isInCart() {
+        flag = false
+        this.props.cartItems.map(item => {
+            if(this.state.item.id === item.id) {
+                flag = true
+            }
+        })
+        return flag
     }
 
     render() {
-        const { cartItems } = this.props
-        return (
-          <View>
+        if(this.isInCart()) {
+            return (
+                <View>
               <View style={styles.container}>
                 <Text style={styles.title}>{this.props.title}</Text>
                 <Text style={styles.description}>{this.props.description}</Text>
@@ -39,10 +51,33 @@ class Item extends React.Component {
                   onPress={() => {this.addToCart()}}>
                     <Text>Add to Cart</Text>
                   </TouchableOpacity>
+                  <TouchableOpacity style={styles.addToCart} 
+                  onPress={() => {this.removeFromCart()}}>
+                    <Text>Remove from Cart</Text>
+                  </TouchableOpacity>
                 </View>
               </View>
           </View>
-        );
+
+            )
+
+        } else {
+            return (
+              <View>
+                  <View style={styles.container}>
+                    <Text style={styles.title}>{this.props.title}</Text>
+                    <Text style={styles.description}>{this.props.description}</Text>
+                    <View style={styles.tagContainer}>
+                      <Text style= {styles.Tag}>${this.props.price}</Text>
+                      <TouchableOpacity style={styles.addToCart} 
+                      onPress={() => {this.addToCart()}}>
+                        <Text>Add to Cart</Text>
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+              </View>
+            );
+        }
       }
 }
 
@@ -52,7 +87,7 @@ const mapStateToProps = state => {
     };
   };
   
-  export default connect(mapStateToProps)(Item);
+  export default connect(mapStateToProps )(Item);
 
 
 
