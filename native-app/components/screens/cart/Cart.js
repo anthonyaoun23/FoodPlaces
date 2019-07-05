@@ -40,7 +40,7 @@ class Cart extends React.Component {
         style={{
           flex: 1,
           flexDirection: "column",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
         }}
       >
         <CartCardList title={"Cart"}>
@@ -73,7 +73,7 @@ class Cart extends React.Component {
           <Button
             disabled={totalItems == 0}
             mode="contained"
-            color="blue"
+            color="#55fac3"
             style={{ borderRadius: 0 }}
             onPress={() =>
               this.props.navigation.navigate("Checkout", {

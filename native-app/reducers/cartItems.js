@@ -22,6 +22,9 @@ const cartItems = (state = [], action) => {
                 }
             })
             return newState
+        
+            case "RESET_CART":
+                return []
 
     }
     return state

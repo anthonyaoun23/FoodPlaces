@@ -35,14 +35,7 @@
                         "quantity" : 0,
                         "description":"Its a chicken salad"
                     },
-                    {
-                        "id":3,
-                        "title":"Caesar Salad",
-                        "price": 11,
-                        "inventory": 10,
-                        "quantity" : 0,
-                        "description":"Its a caesar salad"
-                    }
+                    
 
                 ]
             }
@@ -84,14 +77,7 @@
                         "quantity" : 0,
                         "description":"Its a chicken salad"
                     },
-                    {
-                        "id":3,
-                        "title":"Caesar Salad",
-                        "price": 11,
-                        "inventory": 10,
-                        "quantity" : 0,
-                        "description":"Its a caesar salad"
-                    }
+                    
 
                 ]
             }
@@ -133,14 +119,7 @@
                         "quantity" : 0,
                         "description":"Its a chicken salad"
                     },
-                    {
-                        "id":3,
-                        "title":"Caesar Salad",
-                        "price": 11,
-                        "inventory": 10,
-                        "quantity" : 0,
-                        "description":"Its a caesar salad"
-                    }
+                    
 
                 ]
             }
@@ -182,14 +161,7 @@
                         "quantity" : 0,
                         "description":"Its a chicken salad"
                     },
-                    {
-                        "id":3,
-                        "title":"Caesar Salad",
-                        "price": 11,
-                        "inventory": 10,
-                        "quantity" : 0,
-                        "description":"Its a caesar salad"
-                    }
+                    
 
                 ]
             }
@@ -231,14 +203,7 @@
                         "quantity" : 0,
                         "description":"Its a chicken salad"
                     },
-                    {
-                        "id":3,
-                        "title":"Caesar Salad",
-                        "price": 11,
-                        "inventory": 10,
-                        "quantity" : 0,
-                        "description":"Its a caesar salad"
-                    }
+                    
 
                 ]
             }
@@ -280,14 +245,7 @@
                         "quantity" : 0,
                         "description":"Its a chicken salad"
                     },
-                    {
-                        "id":3,
-                        "title":"Caesar Salad",
-                        "price": 11,
-                        "inventory": 10,
-                        "quantity" : 0,
-                        "description":"Its a caesar salad"
-                    }
+                    
 
                 ]
             }
@@ -329,14 +287,7 @@
                         "quantity" : 0,
                         "description":"Its a chicken salad"
                     },
-                    {
-                        "id":3,
-                        "title":"Caesar Salad",
-                        "price": 11,
-                        "inventory": 10,
-                        "quantity" : 0,
-                        "description":"Its a caesar salad"
-                    }
+                    
 
                 ]
             }
